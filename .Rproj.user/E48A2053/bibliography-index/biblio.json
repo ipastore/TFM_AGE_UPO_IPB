@@ -1,0 +1,1939 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1016/j.agsy.2020.102809",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0308521X19310005",
+            "author": [
+                {
+                    "family": "Aguilera",
+                    "given": "Eduardo"
+                },
+                {
+                    "family": "Díaz-Gaona",
+                    "given": "Cipriano"
+                },
+                {
+                    "family": "García-Laureano",
+                    "given": "Raquel"
+                },
+                {
+                    "family": "Reyes-Palomo",
+                    "given": "Carolina"
+                },
+                {
+                    "family": "Guzmán",
+                    "given": "Gloria I."
+                },
+                {
+                    "family": "Ortolani",
+                    "given": "Livia"
+                },
+                {
+                    "family": "Sánchez-Rodríguez",
+                    "given": "Manuel"
+                },
+                {
+                    "family": "Rodríguez-Estévez",
+                    "given": "Vicente"
+                }
+            ],
+            "container-title": "Agricultural Systems",
+            "id": "aguilera2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        5
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "102809",
+            "title": "Agroecology for adaptation to climate change and resource depletion in the Mediterranean region. A review",
+            "type": "article-journal",
+            "volume": "181"
+        },
+        {
+            "URL": "https://www.biodiversidadla.org/Documentos/Declaracion_Latinoamericana_por_una_Ciencia_Digna_-_Por_la_prohibicion_de_los_transgenicos_en_Latinoamerica",
+            "author": [
+                {
+                    "family": "Carrasco, Andrés E."
+                }
+            ],
+            "id": "carrascoandrése.2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        6,
+                        17
+                    ]
+                ]
+            },
+            "title": "Declaración latinoamericana por una ciencia digna",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Altieri",
+                    "given": "Miguel A"
+                }
+            ],
+            "id": "altieri1989",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "language": "en",
+            "title": "Agroecology: A New Research and Development Paradigm for World Agriculture",
+            "title-short": "Agroecology",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.4060/cc3017en",
+            "URL": "http://www.fao.org/documents/card/en/c/cc3017en",
+            "author": [
+                {
+                    "family": "FAO"
+                }
+            ],
+            "id": "thestat2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        7,
+                        12
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "DOI: 10.4060/cc3017en",
+            "publisher": "FAO; IFAD; UNICEF; WFP; WHO;",
+            "title": "The State of Food Security and Nutrition in the World 2023",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1007/978-3-030-82202-6_2",
+            "URL": "https://doi.org/10.1007/978-3-030-82202-6_2",
+            "author": [
+                {
+                    "family": "Crutzen",
+                    "given": "Paul J."
+                },
+                {
+                    "family": "Stoermer",
+                    "given": "Eugene F."
+                }
+            ],
+            "editor": [
+                {
+                    "family": "Benner",
+                    "given": "Susanne"
+                },
+                {
+                    "family": "Lax",
+                    "given": "Gregor"
+                },
+                {
+                    "family": "Crutzen",
+                    "given": "Paul J."
+                },
+                {
+                    "family": "Pöschl",
+                    "given": "Ulrich"
+                },
+                {
+                    "family": "Lelieveld",
+                    "given": "Jos"
+                },
+                {
+                    "family": "Brauch",
+                    "given": "Hans Günter"
+                }
+            ],
+            "id": "crutzen2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "DOI: 10.1007/978-3-030-82202-6_2",
+            "page": "1921",
+            "publisher": "Springer International Publishing",
+            "publisher-place": "Cham",
+            "title": "The “anthropocene” (2000)",
+            "type": "chapter"
+        },
+        {
+            "URL": "https://books.google.es/books?id=5QeSUdYvAjwC",
+            "author": [
+                {
+                    "family": "Agnoletti",
+                    "given": "M."
+                }
+            ],
+            "collection-title": "CABI publishing series",
+            "id": "agnoletti2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "note": "LCCN: 2006006978",
+            "publisher": "CABI Pub.",
+            "title": "The conservation of cultural landscapes",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1016/j.landusepol.2008.07.004",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S026483770800080X",
+            "author": [
+                {
+                    "family": "Guzmán Casado",
+                    "given": "G. I."
+                },
+                {
+                    "family": "González De Molina",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Land Use Policy",
+            "id": "guzmáncasado2009",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        4
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "502-510",
+            "title": "Preindustrial agriculture versus organic agriculture",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "DOI": "10.1007/978-3-319-06358-4",
+            "author": [
+                {
+                    "family": "González de Molina",
+                    "given": "Manuel"
+                },
+                {
+                    "family": "Toledo",
+                    "given": "Víctor M."
+                }
+            ],
+            "collection-number": "3",
+            "collection-title": "Environmental history",
+            "edition": "1st ed. 2014",
+            "id": "gonzálezdemolina2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "DOI: 10.1007/978-3-319-06358-4",
+            "publisher": "Springer International Publishing : Imprint: Springer",
+            "publisher-place": "Cham",
+            "title": "The social metabolism: A socio-ecological theory of historical change",
+            "title-short": "The social metabolism",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "IPCC"
+                }
+            ],
+            "container-title": "Desertification, land degradation, sustainable land management, food security, and greenhouse gas fluxes in terrestrial ecosystems",
+            "id": "change2019land",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "Land: An IPCC special report on climate change",
+            "title-short": "Land",
+            "type": "chapter",
+            "volume": "41"
+        },
+        {
+            "DOI": "10.1126/science.1057544",
+            "URL": "https://www.science.org/doi/10.1126/science.1057544",
+            "author": [
+                {
+                    "family": "Tilman",
+                    "given": "David"
+                },
+                {
+                    "family": "Fargione",
+                    "given": "Joseph"
+                },
+                {
+                    "family": "Wolff",
+                    "given": "Brian"
+                },
+                {
+                    "family": "D’Antonio",
+                    "given": "Carla"
+                },
+                {
+                    "family": "Dobson",
+                    "given": "Andrew"
+                },
+                {
+                    "family": "Howarth",
+                    "given": "Robert"
+                },
+                {
+                    "family": "Schindler",
+                    "given": "David"
+                },
+                {
+                    "family": "Schlesinger",
+                    "given": "William H."
+                },
+                {
+                    "family": "Simberloff",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Swackhamer",
+                    "given": "Deborah"
+                }
+            ],
+            "container-title": "Science",
+            "id": "tilman2001",
+            "issue": "5515",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001,
+                        4,
+                        13
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "281-284",
+            "title": "Forecasting Agriculturally Driven Global Environmental Change",
+            "type": "article-journal",
+            "volume": "292"
+        },
+        {
+            "DOI": "10.1126/science.1111772",
+            "URL": "https://www.science.org/doi/10.1126/science.1111772",
+            "author": [
+                {
+                    "family": "Foley",
+                    "given": "Jonathan A."
+                },
+                {
+                    "family": "DeFries",
+                    "given": "Ruth"
+                },
+                {
+                    "family": "Asner",
+                    "given": "Gregory P."
+                },
+                {
+                    "family": "Barford",
+                    "given": "Carol"
+                },
+                {
+                    "family": "Bonan",
+                    "given": "Gordon"
+                },
+                {
+                    "family": "Carpenter",
+                    "given": "Stephen R."
+                },
+                {
+                    "family": "Chapin",
+                    "given": "F. Stuart"
+                },
+                {
+                    "family": "Coe",
+                    "given": "Michael T."
+                },
+                {
+                    "family": "Daily",
+                    "given": "Gretchen C."
+                },
+                {
+                    "family": "Gibbs",
+                    "given": "Holly K."
+                },
+                {
+                    "family": "Helkowski",
+                    "given": "Joseph H."
+                },
+                {
+                    "family": "Holloway",
+                    "given": "Tracey"
+                },
+                {
+                    "family": "Howard",
+                    "given": "Erica A."
+                },
+                {
+                    "family": "Kucharik",
+                    "given": "Christopher J."
+                },
+                {
+                    "family": "Monfreda",
+                    "given": "Chad"
+                },
+                {
+                    "family": "Patz",
+                    "given": "Jonathan A."
+                },
+                {
+                    "family": "Prentice",
+                    "given": "I. Colin"
+                },
+                {
+                    "family": "Ramankutty",
+                    "given": "Navin"
+                },
+                {
+                    "family": "Snyder",
+                    "given": "Peter K."
+                }
+            ],
+            "container-title": "Science",
+            "id": "foley2005",
+            "issue": "5734",
+            "issued": {
+                "date-parts": [
+                    [
+                        2005,
+                        7,
+                        22
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "570-574",
+            "title": "Global Consequences of Land Use",
+            "type": "article-journal",
+            "volume": "309"
+        },
+        {
+            "author": [
+                {
+                    "family": "Weis",
+                    "given": "Anthony John"
+                }
+            ],
+            "id": "weis2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "OCLC: ocn851828028",
+            "publisher": "Zed Books",
+            "publisher-place": "London",
+            "title": "The ecological hoofprint: The global burden of industrial livestock",
+            "title-short": "The ecological hoofprint",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Garrido Peña",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "González de Molina",
+                    "given": "Manuel"
+                },
+                {
+                    "family": "Serrano",
+                    "given": "José Luis"
+                },
+                {
+                    "family": "Solana",
+                    "given": "José Luis (eds.)"
+                }
+            ],
+            "collection-title": "Antrazyt",
+            "id": "garridopeñafrancisco2007",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "language": "spa",
+            "publisher": "Icaria",
+            "publisher-place": "Barcelona",
+            "title": "El paradigma ecológico en las ciencias sociales",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Toledo",
+                    "given": "Vı́ctor M"
+                }
+            ],
+            "container-title": "Armando Bartra",
+            "id": "toledo2012grandes",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "29-34",
+            "title": "Los grandes problemas ecológicos",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rockstrom",
+                    "given": "Johan"
+                },
+                {
+                    "family": "Steffen",
+                    "given": "Will"
+                },
+                {
+                    "family": "Noone",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Persson",
+                    "given": "Asa"
+                },
+                {
+                    "family": "Chapin III",
+                    "given": "F Stuart"
+                },
+                {
+                    "family": "Lambin",
+                    "given": "Eric"
+                },
+                {
+                    "family": "Lenton",
+                    "given": "Timothy M"
+                },
+                {
+                    "family": "Scheffer",
+                    "given": "Marten"
+                },
+                {
+                    "family": "Folke",
+                    "given": "Carl"
+                },
+                {
+                    "family": "Schellnhuber",
+                    "given": "Hans Joachim"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "container-title": "Ecology and society",
+            "id": "rockstrom2009planetary",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "1-33",
+            "publisher": "Resilience Alliance Publications",
+            "title": "Planetary boundaries: Exploring the safe operating space for humanity",
+            "title-short": "Planetary boundaries",
+            "type": "article-journal",
+            "volume": "14"
+        },
+        {
+            "DOI": "10.1126/science.1259855",
+            "URL": "https://www.science.org/doi/10.1126/science.1259855",
+            "author": [
+                {
+                    "family": "Steffen",
+                    "given": "Will"
+                },
+                {
+                    "family": "Richardson",
+                    "given": "Katherine"
+                },
+                {
+                    "family": "Rockström",
+                    "given": "Johan"
+                },
+                {
+                    "family": "Cornell",
+                    "given": "Sarah E."
+                },
+                {
+                    "family": "Fetzer",
+                    "given": "Ingo"
+                },
+                {
+                    "family": "Bennett",
+                    "given": "Elena M."
+                },
+                {
+                    "family": "Biggs",
+                    "given": "Reinette"
+                },
+                {
+                    "family": "Carpenter",
+                    "given": "Stephen R."
+                },
+                {
+                    "family": "De Vries",
+                    "given": "Wim"
+                },
+                {
+                    "family": "De Wit",
+                    "given": "Cynthia A."
+                },
+                {
+                    "family": "Folke",
+                    "given": "Carl"
+                },
+                {
+                    "family": "Gerten",
+                    "given": "Dieter"
+                },
+                {
+                    "family": "Heinke",
+                    "given": "Jens"
+                },
+                {
+                    "family": "Mace",
+                    "given": "Georgina M."
+                },
+                {
+                    "family": "Persson",
+                    "given": "Linn M."
+                },
+                {
+                    "family": "Ramanathan",
+                    "given": "Veerabhadran"
+                },
+                {
+                    "family": "Reyers",
+                    "given": "Belinda"
+                },
+                {
+                    "family": "Sörlin",
+                    "given": "Sverker"
+                }
+            ],
+            "container-title": "Science",
+            "id": "steffen2015",
+            "issue": "6223",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        2,
+                        13
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1259855",
+            "title": "Planetary boundaries: Guiding human development on a changing planet",
+            "title-short": "Planetary boundaries",
+            "type": "article-journal",
+            "volume": "347"
+        },
+        {
+            "DOI": "10.5751/ES-09595-220408",
+            "URL": "https://www.ecologyandsociety.org/vol22/iss4/art8/",
+            "author": [
+                {
+                    "family": "Campbell",
+                    "given": "Bruce M."
+                },
+                {
+                    "family": "Beare",
+                    "given": "Douglas J."
+                },
+                {
+                    "family": "Bennett",
+                    "given": "Elena M."
+                },
+                {
+                    "family": "Hall-Spencer",
+                    "given": "Jason M."
+                },
+                {
+                    "family": "Ingram",
+                    "given": "John S. I."
+                },
+                {
+                    "family": "Jaramillo",
+                    "given": "Fernando"
+                },
+                {
+                    "family": "Ortiz",
+                    "given": "Rodomiro"
+                },
+                {
+                    "family": "Ramankutty",
+                    "given": "Navin"
+                },
+                {
+                    "family": "Sayer",
+                    "given": "Jeffrey A."
+                },
+                {
+                    "family": "Shindell",
+                    "given": "Drew"
+                }
+            ],
+            "container-title": "Ecology and Society",
+            "id": "campbell2017",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "art8",
+            "title": "Agriculture production as a major driver of the Earth system exceeding planetary boundaries",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "author": [
+                {
+                    "family": "World Bank",
+                    "given": "Group"
+                }
+            ],
+            "container-title": "World Bank, Washington, DC. License: Creative Commons Attribution CC BY 3.0 IGO.",
+            "id": "worldbankgroup2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022,
+                        4
+                    ]
+                ]
+            },
+            "title": "Commodity markets outlook: The impact of the war in ukraine on commodity markets",
+            "title-short": "Commodity markets outlook",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hubbert M",
+                    "given": "King"
+                }
+            ],
+            "container-title": "American Petroleum Institute. Publication",
+            "id": "king1956nuclear",
+            "issue": "95",
+            "issued": {
+                "date-parts": [
+                    [
+                        1956
+                    ]
+                ]
+            },
+            "page": "1-40",
+            "title": "Nuclear energy and the fossil fuels",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hall",
+                    "given": "Charles AS"
+                },
+                {
+                    "family": "Balogh",
+                    "given": "Stephen"
+                },
+                {
+                    "family": "Murphy",
+                    "given": "David JR"
+                }
+            ],
+            "container-title": "Energies",
+            "id": "hall2009minimum",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "25-47",
+            "publisher": "Molecular Diversity Preservation International",
+            "title": "What is the minimum EROI that a sustainable society must have?",
+            "type": "article-journal",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hall",
+                    "given": "Charles AS"
+                }
+            ],
+            "container-title": "Sustainability",
+            "id": "hall2011introduction",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "number": "10",
+            "page": "1773-1777",
+            "publisher": "Molecular Diversity Preservation International (MDPI)",
+            "title": "Introduction to special issue on new studies in EROI (energy return on investment)",
+            "type": "",
+            "volume": "3"
+        },
+        {
+            "DOI": "10.1016/j.crsust.2022.100174",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S2666049022000524",
+            "author": [
+                {
+                    "family": "Laherrère",
+                    "given": "Jean"
+                },
+                {
+                    "family": "Hall",
+                    "given": "Charles A. S."
+                },
+                {
+                    "family": "Bentley",
+                    "given": "Roger"
+                }
+            ],
+            "container-title": "Current Research in Environmental Sustainability",
+            "id": "laherrère2022",
+            "issued": {
+                "date-parts": [
+                    [
+                        2022
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "100174",
+            "title": "How much oil remains for the world to produce? Comparing assessment methods, and separating fact from fiction",
+            "type": "article-journal",
+            "volume": "4"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cordell",
+                    "given": "Dana"
+                }
+            ],
+            "id": "cordell2010",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "language": "en",
+            "note": "OCLC: 636393632",
+            "publisher": "Department of Water; Environmental Studies [The Tema Institute], Linköping University",
+            "publisher-place": "Linköping",
+            "title": "The story of phosphorus: sustainability implications of global phosphorus scarcity for food security",
+            "title-short": "The story of phosphorus",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Valero Capilla",
+                    "given": "Antonio"
+                },
+                {
+                    "family": "Valero Delgado",
+                    "given": "Alicia"
+                }
+            ],
+            "id": "valerocapilla2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "language": "en",
+            "publisher": "World Scientific",
+            "publisher-place": "New Jersey",
+            "title": "Thanatia: the destiny of the Earth’s mineral resources: a cradle-to-cradle thermodynamic assessment",
+            "title-short": "Thanatia",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1016/j.biocon.2011.10.036",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0006320711004526",
+            "author": [
+                {
+                    "family": "Shearman",
+                    "given": "Philip"
+                },
+                {
+                    "family": "Bryan",
+                    "given": "Jane"
+                },
+                {
+                    "family": "Laurance",
+                    "given": "William F."
+                }
+            ],
+            "container-title": "Biological Conservation",
+            "id": "shearman2012",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "17-21",
+            "title": "Are we approaching ‘peak timber’ in the tropics?",
+            "type": "article-journal",
+            "volume": "151"
+        },
+        {
+            "DOI": "10.1021/acs.est.9b00177",
+            "URL": "https://pubs.acs.org/doi/10.1021/acs.est.9b00177",
+            "author": [
+                {
+                    "family": "Aguilera",
+                    "given": "Eduardo"
+                },
+                {
+                    "family": "Vila-Traver",
+                    "given": "Jaime"
+                },
+                {
+                    "family": "Deemer",
+                    "given": "Bridget R."
+                },
+                {
+                    "family": "Infante-Amate",
+                    "given": "Juan"
+                },
+                {
+                    "family": "Guzmán",
+                    "given": "Gloria I."
+                },
+                {
+                    "family": "González De Molina",
+                    "given": "Manuel"
+                }
+            ],
+            "container-title": "Environmental Science & Technology",
+            "id": "aguilera2019",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        5,
+                        7
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "5091-5101",
+            "title": "Methane Emissions from Artificial Waterbodies Dominate the Carbon Footprint of Irrigation: A Study of Transitions in the FoodEnergyWaterClimate Nexus (Spain, 19002014)",
+            "title-short": "Methane Emissions from Artificial Waterbodies Dominate the Carbon Footprint of Irrigation",
+            "type": "article-journal",
+            "volume": "53"
+        },
+        {
+            "author": [
+                {
+                    "family": "UNEP",
+                    "given": "IRP"
+                }
+            ],
+            "id": "united2011decoupling",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "publisher": "UNEP/Earthprint",
+            "title": "Decoupling natural resource use and environmental impacts from economic growth",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "UNEP",
+                    "given": "IRP"
+                },
+                {
+                    "family": "Fischer-Kowalski",
+                    "given": "M"
+                },
+                {
+                    "family": "West",
+                    "given": "J"
+                },
+                {
+                    "family": "Giljum",
+                    "given": "S"
+                },
+                {
+                    "family": "Dittrich",
+                    "given": "M"
+                },
+                {
+                    "family": "Eisenmenger",
+                    "given": "N"
+                }
+            ],
+            "container-title": "Assessment report for the UNEP international resource panel. United Nations Environment Programme, Nairobi",
+            "id": "unep2016global",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "title": "Global material flows and resource productivity",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.2307/j.ctv2v88fc8",
+            "URL": "http://www.jstor.org/stable/10.2307/j.ctv2v88fc8",
+            "author": [
+                {
+                    "family": "González de Molina",
+                    "given": "Manuel"
+                },
+                {
+                    "family": "Petersen",
+                    "given": "Paulo Frederico"
+                },
+                {
+                    "family": "Peña",
+                    "given": "Francisco Garrido"
+                },
+                {
+                    "family": "Caporal",
+                    "given": "Francisco Roberto"
+                }
+            ],
+            "id": "demolina2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        7,
+                        1
+                    ]
+                ]
+            },
+            "language": "es",
+            "note": "DOI: 10.2307/j.ctv2v88fc8",
+            "publisher": "Consejo Latinoamericano de Ciencias Sociales. CLACSO",
+            "title": "Introducción a la agroecología política",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bensin",
+                    "given": "BM"
+                }
+            ],
+            "id": "bensin1928agroecological",
+            "issued": {
+                "date-parts": [
+                    [
+                        1928
+                    ]
+                ]
+            },
+            "publisher": "Chorotypes",
+            "title": "Agroecological characteristics description and classification of the local corn varieties",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Hénin",
+                    "given": "Stéphane"
+                }
+            ],
+            "container-title": "Économie rurale",
+            "id": "henin1967acquisitions",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1967
+                    ]
+                ]
+            },
+            "page": "37-44",
+            "publisher": "Persée-Portail des revues scientifiques en SHS",
+            "title": "Les acquisitions techniques en production végétale et leur application",
+            "type": "article-journal",
+            "volume": "74"
+        },
+        {
+            "author": [
+                {
+                    "family": "Shiva",
+                    "given": "Vandana"
+                }
+            ],
+            "container-title": "(No Title)",
+            "id": "shiva1989violence",
+            "issued": {
+                "date-parts": [
+                    [
+                        1989
+                    ]
+                ]
+            },
+            "title": "The violence of the green revolution: Ecological degradation and political conflict in punjab",
+            "title-short": "The violence of the green revolution",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hecht",
+                    "given": "Susanna B"
+                }
+            ],
+            "container-title": "Agroecology",
+            "id": "hecht1995evolution",
+            "issued": {
+                "date-parts": [
+                    [
+                        1995
+                    ]
+                ]
+            },
+            "page": "1-19",
+            "publisher": "CRC Press",
+            "title": "The evolution of agroecological thought",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Altieri",
+                    "given": "Miguel A"
+                }
+            ],
+            "id": "altieri1987agroecology",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "page": "227",
+            "publisher": "Westview Press, Boulder, CO",
+            "title": "Agroecology: The scientific basis of alternative agriculture",
+            "title-short": "Agroecology",
+            "type": "chapter"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gliessman",
+                    "given": "Stephen R"
+                }
+            ],
+            "container-title": "Agroecology: Researching the ecological basis for sustainable agriculture",
+            "id": "gliessman1990agroecology",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "page": "3-10",
+            "publisher": "Springer",
+            "title": "Agroecology: Researching the ecological basis for sustainable agriculture",
+            "title-short": "Agroecology",
+            "type": "chapter"
+        },
+        {
+            "DOI": "10.3763/ijas.2009.0400",
+            "URL": "https://www.tandfonline.com/doi/full/10.3763/ijas.2009.0400",
+            "author": [
+                {
+                    "family": "Wezel",
+                    "given": "A."
+                },
+                {
+                    "family": "Soldat",
+                    "given": "V."
+                }
+            ],
+            "container-title": "International Journal of Agricultural Sustainability",
+            "id": "wezel2009",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        2
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "3-18",
+            "title": "A quantitative and qualitative historical analysis of the scientific discipline of agroecology",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "DOI": "10.1080/21683565.2014.951459",
+            "URL": "http://www.tandfonline.com/doi/abs/10.1080/21683565.2014.951459",
+            "author": [
+                {
+                    "family": "Levidow",
+                    "given": "Les"
+                },
+                {
+                    "family": "Pimbert",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Vanloqueren",
+                    "given": "Gaetan"
+                }
+            ],
+            "container-title": "Agroecology and Sustainable Food Systems",
+            "id": "levidow2014",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014,
+                        11,
+                        26
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "1127-1155",
+            "title": "Agroecological Research: Conformingor Transforming the Dominant Agro-Food Regime?",
+            "title-short": "Agroecological Research",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "author": [
+                {
+                    "family": "Schneidewind",
+                    "given": "Uwe"
+                },
+                {
+                    "family": "Singer-Brodowski",
+                    "given": "Mandy"
+                },
+                {
+                    "family": "Augenstein",
+                    "given": "Karoline"
+                },
+                {
+                    "family": "Stelzer",
+                    "given": "Franziska"
+                }
+            ],
+            "id": "schneidewind2016pledge",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "DEU",
+            "title": "Pledge for a transformative science: A conceptual framework",
+            "title-short": "Pledge for a transformative science",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1080/10440046.2012.736926",
+            "URL": "https://www.tandfonline.com/doi/full/10.1080/10440046.2012.736926",
+            "author": [
+                {
+                    "family": "Méndez",
+                    "given": "V. Ernesto"
+                },
+                {
+                    "family": "Bacon",
+                    "given": "Christopher M."
+                },
+                {
+                    "family": "Cohen",
+                    "given": "Roseann"
+                }
+            ],
+            "container-title": "Agroecology and Sustainable Food Systems",
+            "id": "méndez2013",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "3-18",
+            "title": "Agroecology as a Transdisciplinary, Participatory, and Action-Oriented Approach",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "author": [
+                {
+                    "family": "Holt-Giménez",
+                    "given": "Eric"
+                },
+                {
+                    "family": "Altieri",
+                    "given": "Miguel A"
+                }
+            ],
+            "container-title": "Agroecology and sustainable Food systems",
+            "id": "holt2013agroecology",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "90-102",
+            "publisher": "Taylor & Francis",
+            "title": "Agroecology, food sovereignty, and the new green revolution",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "author": [
+                {
+                    "family": "McMichael",
+                    "given": "Philip"
+                }
+            ],
+            "container-title": "Socialist register 2007",
+            "id": "mcmichael2006feeding",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "page": "170-194",
+            "publisher": "Londres: Merlin Press",
+            "title": "Feeding the world: Agriculture, development and ecology",
+            "title-short": "Feeding the world",
+            "type": "chapter",
+            "volume": "43"
+        },
+        {
+            "URL": "https://wedocs.unep.org/20.500.11822/7862",
+            "abstract": "",
+            "author": [
+                {
+                    "family": "International Assessment of Agricultural Knowledge Science and Technology for Development (IAASTD)",
+                    "given": "United Nations Environment Programme"
+                }
+            ],
+            "id": "iaastd2009",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "title": "Agriculture at a crossroads: Synthesis report",
+            "title-short": "Agriculture at a crossroads",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "De Schutter",
+                    "given": "Olivier"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "container-title": "Report presented at the 16th session of the United Nations Human Rights Council [A/HRC/16/49]",
+            "id": "deschutter2011agroecology",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "title": "Agroecology and the right to food",
+            "type": "article-journal",
+            "volume": "8"
+        },
+        {
+            "author": [
+                {
+                    "family": "HLPE"
+                }
+            ],
+            "id": "HLPE12",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017,
+                        9
+                    ]
+                ]
+            },
+            "page": "",
+            "publisher": "Rome",
+            "title": "Nutrition and food systems. A report by the high level panel of experts on food security and nutrition of the committee on world food security.",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1126/science.1172133",
+            "URL": "https://www.sciencemag.org/lookup/doi/10.1126/science.1172133",
+            "author": [
+                {
+                    "family": "Ostrom",
+                    "given": "Elinor"
+                }
+            ],
+            "container-title": "Science",
+            "id": "ostrom2009",
+            "issue": "5939",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009,
+                        7,
+                        24
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "419-422",
+            "title": "A General Framework for Analyzing Sustainability of Social-Ecological Systems",
+            "type": "article-journal",
+            "volume": "325"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ostrom",
+                    "given": "Elinor"
+                }
+            ],
+            "id": "ostrom1990governing",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "publisher": "Cambridge university press",
+            "title": "Governing the commons: The evolution of institutions for collective action",
+            "title-short": "Governing the commons",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ostrom",
+                    "given": "E"
+                }
+            ],
+            "id": "ostrom2001commons",
+            "issued": {
+                "date-parts": [
+                    [
+                        2001
+                    ]
+                ]
+            },
+            "publisher": "Academic Press",
+            "title": "Commons, institutional diversity of. Encyclopedia of biodiversity, volume i",
+            "type": ""
+        },
+        {
+            "DOI": "https://doi.org/10.1016/j.worlddev.2015.10.041",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0305750X15002703",
+            "author": [
+                {
+                    "family": "Lowder",
+                    "given": "Sarah K."
+                },
+                {
+                    "family": "Skoet",
+                    "given": "Jakob"
+                },
+                {
+                    "family": "Raney",
+                    "given": "Terri"
+                }
+            ],
+            "container-title": "World Development",
+            "id": "lowder2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "page": "16-29",
+            "title": "The number, size, and distribution of farms, smallholder farms, and family farms worldwide",
+            "type": "article-journal",
+            "volume": "87"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mangiafico",
+                    "given": "Sal"
+                }
+            ],
+            "id": "handbook-R-Man",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016,
+                        1
+                    ]
+                ]
+            },
+            "page": "",
+            "title": "Summary and analysis of extension program evaluation in r",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Guzmán Casado",
+                    "given": "Gloria Isabael"
+                },
+                {
+                    "family": "Molina",
+                    "given": "Manuel"
+                },
+                {
+                    "family": "Guzmán",
+                    "given": "Eduardo"
+                }
+            ],
+            "id": "guzman2000",
+            "issued": {
+                "date-parts": [
+                    [
+                        2000,
+                        1
+                    ]
+                ]
+            },
+            "page": "535",
+            "publisher": "Ed: Mundi-Prensa. Madrid.",
+            "title": "Introducción a la agroecología como desarrollo rural sostenible",
+            "type": "book"
+        },
+        {
+            "URL": "https://ec.europa.eu/eurostat/databrowser/view/ENV_AC_AIGG_Q__custom_2691128/bookmark/table?lang=en&bookmarkId=4bb9ab20-296b-4119-88e9-580ea7741c0a",
+            "author": [
+                {
+                    "family": "EUROSTAT"
+                }
+            ],
+            "id": "eurostat2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "title": "Air emissions accounts for greenhouse gases by NACE rev. 2 activity - quarterly data",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1080/0966369X.2013.879103",
+            "URL": "https://doi.org/10.1080/0966369X.2013.879103",
+            "author": [
+                {
+                    "family": "Oedl-Wieser",
+                    "given": "Theresia"
+                }
+            ],
+            "container-title": "Gender, Place & Culture",
+            "id": "oedl2015",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "685-699",
+            "publisher": "Routledge",
+            "title": "Gender equality: A core dimension in rural development programmes in austria?",
+            "title-short": "Gender equality",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "DOI": "10.1080/0966369X.2014.939147",
+            "URL": "https://doi.org/10.1080/0966369X.2014.939147",
+            "author": [
+                {
+                    "family": "Shortall",
+                    "given": "Sally"
+                }
+            ],
+            "container-title": "Gender, Place & Culture",
+            "id": "shortall2015",
+            "issue": "5",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "717-730",
+            "publisher": "Routledge",
+            "title": "Gender mainstreaming and the common agricultural policy",
+            "type": "article-journal",
+            "volume": "22"
+        },
+        {
+            "DOI": "https://doi.org/10.1016/j.jrurstud.2015.01.003",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0743016715000042",
+            "author": [
+                {
+                    "family": "Zagata",
+                    "given": "Lukas"
+                },
+                {
+                    "family": "Sutherland",
+                    "given": "Lee-Ann"
+                }
+            ],
+            "container-title": "Journal of Rural Studies",
+            "id": "zagata2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "39-51",
+            "title": "Deconstructing the ‘young farmer problem in europe’: Towards a research agenda",
+            "title-short": "Deconstructing the ‘young farmer problem in europe’",
+            "type": "article-journal",
+            "volume": "38"
+        },
+        {
+            "DOI": "https://doi.org/10.1016/j.landusepol.2016.09.006",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S0264837715302805",
+            "author": [
+                {
+                    "family": "Leonard",
+                    "given": "Brian"
+                },
+                {
+                    "family": "Kinsella",
+                    "given": "Anne"
+                },
+                {
+                    "family": "O’Donoghue",
+                    "given": "Cathal"
+                },
+                {
+                    "family": "Farrell",
+                    "given": "Maura"
+                },
+                {
+                    "family": "Mahon",
+                    "given": "Marie"
+                }
+            ],
+            "container-title": "Land Use Policy",
+            "id": "leonard2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "147-159",
+            "title": "Policy drivers of farm succession and inheritance",
+            "type": "article-journal",
+            "volume": "61"
+        },
+        {
+            "DOI": "10.1007/s10460-020-10043-7",
+            "URL": "https://link.springer.com/10.1007/s10460-020-10043-7",
+            "author": [
+                {
+                    "family": "Altieri",
+                    "given": "Miguel A."
+                },
+                {
+                    "family": "Nicholls",
+                    "given": "Clara Ines"
+                }
+            ],
+            "container-title": "Agriculture and Human Values",
+            "id": "altieri2020",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020,
+                        9
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "525-526",
+            "title": "Agroecology and the emergence of a post COVID-19 agriculture",
+            "type": "article-journal",
+            "volume": "37"
+        },
+        {
+            "DOI": "10.1016/j.scitotenv.2018.10.377",
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0048969718342773",
+            "author": [
+                {
+                    "family": "Recanati",
+                    "given": "F."
+                },
+                {
+                    "family": "Maughan",
+                    "given": "C."
+                },
+                {
+                    "family": "Pedrotti",
+                    "given": "M."
+                },
+                {
+                    "family": "Dembska",
+                    "given": "K."
+                },
+                {
+                    "family": "Antonelli",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Science of The Total Environment",
+            "id": "recanati2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019,
+                        2
+                    ]
+                ]
+            },
+            "language": "en",
+            "page": "908-919",
+            "title": "Assessing the role of CAP for more sustainable and healthier food systems in Europe: A literature review",
+            "title-short": "Assessing the role of CAP for more sustainable and healthier food systems in Europe",
+            "type": "article-journal",
+            "volume": "653"
+        },
+        {
+            "DOI": "10.59327/IPCC/AR6-9789291691647",
+            "URL": "https://www.ipcc.ch/report/ar6/syr/",
+            "author": [
+                {
+                    "family": "IPCC"
+                }
+            ],
+            "id": "IPCC2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023,
+                        7,
+                        25
+                    ]
+                ]
+            },
+            "title": "Climate change 2023: Synthesis report.",
+            "title-short": "Climate change 2023",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
+                    "family": "UNEP"
+                }
+            ],
+            "id": "UNEP2023",
+            "issued": {
+                "date-parts": [
+                    [
+                        2023
+                    ]
+                ]
+            },
+            "title": "Global sustainable development report 2023: Times of crisis, times of change: Science for accelerating transformations to sustainable development.",
+            "title-short": "Global sustainable development report 2023",
+            "type": "report"
+        },
+        {
+            "URL": "https://sustainingthecommons.org/",
+            "author": [
+                {
+                    "family": "Anderies",
+                    "given": "John M."
+                },
+                {
+                    "family": "Janssen",
+                    "given": "Marco A."
+                }
+            ],
+            "id": "commons2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Center for Behavior, Institutions; the Environment.",
+            "title": "Sustaining the commons",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1016/S2212-5671(15)00030-1",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S2212567115000301",
+            "author": [
+                {
+                    "family": "Kontogeorgos",
+                    "given": "Achilleas"
+                },
+                {
+                    "family": "Tsampra",
+                    "given": "Maria"
+                },
+                {
+                    "family": "Chatzitheodoridis",
+                    "given": "Fotios"
+                }
+            ],
+            "container-title": "The Economies of Balkan and Eastern Europe Countries in the Changed World (EBEEC 2014)",
+            "id": "kontogeorgos2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015,
+                        1,
+                        1
+                    ]
+                ]
+            },
+            "page": "296-303",
+            "title": "Agricultural policy and the environment protection through the eyes of new farmers: Evidence from a country of southeast europe",
+            "title-short": "Agricultural policy and the environment protection through the eyes of new farmers",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "DOI": "10.5281/zenodo.3484682",
+            "author": [
+                {
+                    "family": "Lyngs",
+                    "given": "Ulrik"
+                }
+            ],
+            "container-title": "GitHub repository",
+            "id": "lyngsOxforddown2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "publisher": "https://github.com/ulyngs/oxforddown; GitHub",
+            "title": "Oxforddown: An oxford university thesis template for r markdown",
+            "title-short": "Oxforddown",
+            "type": ""
+        }
+    ],
+    "project_biblios": [
+        "bibliography/references.bib",
+        "bibliography/additional-references.bib"
+    ]
+}

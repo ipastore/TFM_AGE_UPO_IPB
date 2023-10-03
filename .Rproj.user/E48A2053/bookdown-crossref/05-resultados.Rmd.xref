@@ -1,0 +1,10 @@
+h1:resultados Resultados
+h2:comparación-de-valoración-entre-las-pps Comparación de valoración entre las PPs
+fig:fig-todas-politicas Porcentaje de respuestas entre políticas, agrupadas por tipo de respuesta ($n=55$).
+tab:mcnemar-politicas Valores p de las pruebas de simetría de McNemar-Bowker comparando parejas de PPs
+h2:sociodemo-pps Influencia de factores sociodemográficos en la valoración de las PPs
+tab:socio-demograficos-politicas Valores p de las pruebas de Fisher para cada factor sociodemográfico y política 
+tab:post-estudios-granja Residuos estandarizados de la prueba de ${\\chi}^2$ de Granja vs Estudios. Donde 
+h2:influencia-de-factores-técnico-productivos-en-la-valoración-de-las-pps Influencia de factores técnico productivos en la valoración de las PPs
+tab:tecnico-productivos-politicas Valores p de las pruebas de Fisher para cada factor técnico productivo y política 
+

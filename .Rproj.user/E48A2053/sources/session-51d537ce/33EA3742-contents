@@ -1,0 +1,894 @@
+---
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/template.tex
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+```{r setupresultados, include=FALSE}
+# don't show code unless we explicitly set echo = TRUE
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Resultados {#resultados}
+
+\minitoc <!-- this will include a mini table of contents-->
+
+## Comparación de valoración entre las PPs
+
+En la Figura \@ref(fig:fig-todas-politicas) se muestran los porcentajes de respuesta por política, agrupadas por tipo de respuesta. En general, la PP que se mostró como más desconocida fue la Directiva de Nitratos y la que recibió mayor valoración como *Útil* fue la  Estrategia sobre la Biodiversidad 2030. Además se aprecia que la respuesta *Inutil* es la que cuenta con menos frecuencia para todas las políticas. 
+
+
+```{r preparo-grafica-todas-politicas, echo = FALSE}
+
+#Empiezo a generar figuras: Todas las politicas ----
+UE_Agua <- group_1f(data_copy1, UE_Agua) %>% nuevo_data_frame_1f
+UE_Nitratos <- group_1f(data_copy1, UE_Nitratos) %>% nuevo_data_frame_1f
+UE_Aves <- group_1f(data_copy1, UE_Aves) %>% nuevo_data_frame_1f
+UE_Granja <- group_1f(data_copy1, UE_Granja_A_La_Mesa) %>% nuevo_data_frame_1f
+UE_Biodiversidad <- group_1f(data_copy1, UE_Biodiversidad) %>% nuevo_data_frame_1f
+UE_Plaguicidas <- group_1f(data_copy1, UE_Directiva_Plaguicidas) %>% nuevo_data_frame_1f
+
+#bind
+#Hago Bind
+UE_Politicas_figura <- rbind(UE_Granja, UE_Plaguicidas, UE_Biodiversidad, UE_Aves, UE_Agua, UE_Nitratos) 
+
+```
+```{r fig-todas-politicas, fig.cap = "Porcentaje de respuestas entre políticas, agrupadas por tipo de respuesta ($n=55$).", fig.scap="Políticas Públicas arupadas por respuesta"}
+
+#### grafico politicas ----
+f_Politicas <- ggplot(data = UE_Politicas_figura, mapping = aes(x = Politica, y = Porcentaje, fill=Politica))
+f_Politicas + geom_bar(position = "dodge", stat = "identity") + theme(legend.position = "top") +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent_format(scale = 1, suffix = "%")) +
+  facet_grid(~ Respuesta) +
+  xlab("")+
+  ylab("")+
+  guides(fill="none")
+```
+
+Al analizar las diferencias de valoración entre PPs agrupadas por parejas (Tabla \@ref(tab:mcnemar-politicas) se encontraron 3 parejas con diferencias significativas de valoración. Además 6 comparaciones no pudieron analizarse debido al tamaño de la muestra (presencia de ceros en categorías) y pasaron directamente al análisis *Posthoc*. De las 6 parejas, 2 tuvieron diferencias significativas (marcadas con un $\bullet$) dando un total de 5 parejas para el análisis *Posthoc*. Las 4 parejas sin diferencias significativas fueron marcadads con $0_s$.
+
+
+
+```{r mcnemar-politicas, echo=FALSE}
+#tabla de contingencias mcnemar cruzadas ----
+#S
+cont_Agua_Nitratos <- table(data_copy1$UE_Agua, data_copy1$UE_Nitratos)
+Stat_Agua_Nitratos = cont_Agua_Nitratos %>% all_mcnemar()
+#S
+cont_Agua_Biodiversidad <- table(data_copy1$UE_Agua, data_copy1$UE_Biodiversidad)
+Stat_Agua_Biodiversidad = cont_Agua_Biodiversidad %>% all_mcnemar()
+#NS  
+cont_Agua_Plaguicidas <- table(data_copy1$UE_Agua, data_copy1$UE_Directiva_Plaguicidas)
+Stat_Agua_Plaguicidas = cont_Agua_Plaguicidas %>% all_mcnemar()
+
+#NS  
+cont_Agua_Aves <- table(data_copy1$UE_Agua, data_copy1$UE_Aves)
+Stat_Agua_Aves = cont_Agua_Aves %>% all_mcnemar()
+
+#NS  
+cont_Agua_Granja <- table(data_copy1$UE_Agua, data_copy1$UE_Granja_A_La_Mesa)
+Stat_Agua_Granja = cont_Agua_Granja %>% all_mcnemar()
+
+#0s Despues no dio significativo
+cont_Nitratos_Aves <- table(data_copy1$UE_Nitratos, data_copy1$UE_Aves)
+Stat_Nitratos_Aves = cont_Nitratos_Aves %>% all_mcnemar()
+
+#0s (DEBERIA SER SIGNIFICATIVO)
+cont_Nitratos_Granja <- table(data_copy1$UE_Nitratos, data_copy1$UE_Granja_A_La_Mesa)
+Stat_Nitratos_Granja = cont_Nitratos_Granja %>% all_mcnemar()
+
+#0s
+cont_Nitratos_Biodiversidad <- table(data_copy1$UE_Nitratos, data_copy1$UE_Biodiversidad)
+Stat_Nitratos_Biodiversidad = cont_Nitratos_Biodiversidad %>% all_mcnemar()
+
+#0s (DEBERIA SER SIGNIFICATIVO)
+cont_Nitratos_Plaguicidas <- table(data_copy1$UE_Nitratos, data_copy1$UE_Directiva_Plaguicidas)
+Stat_Nitratos_Plaguicidas = cont_Nitratos_Plaguicidas %>% all_mcnemar()
+
+#0s (DEBERIA SER SIGNIFICATIVO): NO DIO
+cont_Aves_Granja <- table(data_copy1$UE_Aves, data_copy1$UE_Granja_A_La_Mesa)
+Stat_Aves_Granja = cont_Aves_Granja %>% all_mcnemar()
+
+#Significativo OK
+cont_Aves_Biodiversidad <- table(data_copy1$UE_Aves, data_copy1$UE_Biodiversidad)
+Stat_Aves_Biodiversidad = cont_Aves_Biodiversidad %>% all_mcnemar()
+
+#NS  
+cont_Aves_Plaguicidas <- table(data_copy1$UE_Aves, data_copy1$UE_Directiva_Plaguicidas)
+Stat_Aves_Plaguicidas = cont_Aves_Plaguicidas %>% all_mcnemar()
+#NS
+cont_Granja_Biodiversidad <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$UE_Biodiversidad)
+Stat_Granja_Biodiversidad = cont_Granja_Biodiversidad %>% all_mcnemar()
+#NS
+cont_Granja_Plaguicidas <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$UE_Directiva_Plaguicidas)
+Stat_Granja_Plaguicidas = cont_Granja_Plaguicidas %>% all_mcnemar()
+
+#0s  
+cont_Biodiversidad_Plaguicidas <- table(data_copy1$UE_Biodiversidad, data_copy1$UE_Directiva_Plaguicidas)
+Stat_Biodiversidad_Plaguicidas = cont_Biodiversidad_Plaguicidas %>% all_mcnemar()
+
+##McNemar Todas Politicas ----
+
+All_mcnemar_politicas <- data.frame(c("-",Stat_Agua_Aves$p_value_latex,Stat_Agua_Nitratos$p_value_latex,Stat_Agua_Granja$p_value_latex,Stat_Agua_Biodiversidad$p_value_latex,Stat_Agua_Plaguicidas$p_value_latex),
+                             c("-","-",Stat_Nitratos_Aves$p_value_latex,Stat_Aves_Granja$p_value_latex,Stat_Aves_Biodiversidad$p_value_latex,Stat_Aves_Plaguicidas$p_value_latex),
+                             c("-","-","-","$\\bullet$","$\\bullet$",Stat_Nitratos_Plaguicidas$p_value_latex),
+                             c("-","-","-","-",Stat_Granja_Biodiversidad$p_value_latex,Stat_Granja_Plaguicidas$p_value_latex),
+                             c("-","-","-","-","-",Stat_Biodiversidad_Plaguicidas$p_value_latex),
+                             c("-","-","-","-","-","-")
+                       )
+
+colnames(All_mcnemar_politicas) <- c("Agua", "Aves", "Nitratos", "Granja", "Biodiversidad", "Plaguicidas")
+rownames(All_mcnemar_politicas) <- c("Agua", "Aves", "Nitratos", "Granja", "Biodiversidad", "Plaguicidas")
+
+knitr::kable(All_mcnemar_politicas, format="latex", booktabs=T, escape=F, caption = "Valores p de las pruebas de simetría de McNemar-Bowker comparando parejas de PPs", caption.short = "Comparación de percepeción entre PPs") %>% 
+  add_footnote(c("Nivel de significancia ($p<0.05$) $\\rightarrow$  Alto = ***, Medio = ** y Bajo = *","$\\bullet \\rightarrow$ limitación por presencia de  y valores significativos en análisis $posthoc$ ", "$0_s \\rightarrow$ limitación por presencia de ceros y valores no significativos en análisis $posthoc$" ), notation="alphabet", escape=F) 
+
+
+```
+
+
+
+```{r post-agua-nitratos, echo=FALSE}
+
+#POSTHOC Agua-Nitratos ----
+Post_Agua_Nitratos = nominalSymmetryTest(cont_Agua_Nitratos)
+
+cont_Agua_Nitratos[2,2]<- cell_spec(cont_Agua_Nitratos[2, 2],"latex", color="red") 
+cont_Agua_Nitratos[2,3]<- cell_spec(cont_Agua_Nitratos[2, 3],"latex", color="red") 
+cont_Agua_Nitratos[3,2]<- cell_spec(cont_Agua_Nitratos[3, 2],"latex", color="red")  
+cont_Agua_Nitratos[3,3]<- cell_spec(cont_Agua_Nitratos[3, 3],"latex", color="red")
+
+
+# knitr::kable(cont_Agua_Nitratos, format= "latex", booktabs = T,escape = F) %>%
+#   add_header_above(c(" " = 1, "Nitratos" = 3),bold=T, line=F) %>%
+#   pack_rows("Agua", 1, 3) %>% 
+#   add_footnote(c(paste("p-valor McNemar: ",round(Stat_Agua_Nitratos$p.value, digits = 3)),
+#                  paste("p-valor Simetría 2x2: ",round(Post_Agua_Nitratos$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+#                  )
+#                )
+
+t20 <- kable(cont_Agua_Nitratos, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Nitratos" = 3),bold=T, line=F) %>%
+  pack_rows("Agua", 1, 3) %>%
+  add_footnote(c(paste("p-valor McNemar: ",round(Stat_Agua_Nitratos$p.value, digits = 3)),
+                 paste("p-valor Simetría 2x2: ",round(Post_Agua_Nitratos$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+                 )
+               )
+```
+
+```{r post-agua-biodiversidad, echo=FALSE}
+
+#POSTHOC Agua-Biodiversidad ----
+Post_Agua_Biodiversidad = nominalSymmetryTest(cont_Agua_Biodiversidad)
+
+cont_Agua_Biodiversidad[2,2]<- cell_spec(cont_Agua_Biodiversidad[2, 2],"latex", color="red") 
+cont_Agua_Biodiversidad[2,3]<- cell_spec(cont_Agua_Biodiversidad[2, 3],"latex", color="red") 
+cont_Agua_Biodiversidad[3,2]<- cell_spec(cont_Agua_Biodiversidad[3, 2],"latex", color="red")  
+cont_Agua_Biodiversidad[3,3]<- cell_spec(cont_Agua_Biodiversidad[3, 3],"latex", color="red")
+
+# knitr::kable(cont_Agua_Biodiversidad, format= "latex", booktabs = T,escape = F) %>%
+#   add_header_above(c(" " = 1, "Biodiversidad" = 3),bold=T, line=F) %>%
+#   pack_rows("Agua", 1, 3) %>% 
+#   add_footnote(c(paste("p-valor McNemar: ",round(Stat_Agua_Biodiversidad$p.value, digits = 3)),
+#                  paste("p-valor Simetría 2x2: ",round(Post_Agua_Biodiversidad$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+#                  )
+#                )
+
+t21 <- kable(cont_Agua_Biodiversidad, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Biodiversidad" = 3),bold=T, line=F) %>%
+  pack_rows("Agua", 1, 3) %>%
+  add_footnote(c(paste("p-valor McNemar: ",round(Stat_Agua_Biodiversidad$p.value, digits = 3)),
+                 paste("p-valor Simetría 2x2: ",round(Post_Agua_Biodiversidad$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+                 )
+               )
+
+#Nitratos Aves POSTHOC no significativo ----
+Post_Nitratos_Aves = nominalSymmetryTest(cont_Nitratos_Aves)
+```
+
+
+```{r post-nitratos-granja, echo=FALSE}
+
+#POSTHOC Nitratos-Granja ----
+Post_Nitratos_Granja = nominalSymmetryTest(cont_Nitratos_Granja)
+
+cont_Nitratos_Granja[2,2]<- cell_spec(cont_Nitratos_Granja[2, 2],"latex", color="red") 
+cont_Nitratos_Granja[2,3]<- cell_spec(cont_Nitratos_Granja[2, 3],"latex", color="red") 
+cont_Nitratos_Granja[3,2]<- cell_spec(cont_Nitratos_Granja[3, 2],"latex", color="red")  
+cont_Nitratos_Granja[3,3]<- cell_spec(cont_Nitratos_Granja[3, 3],"latex", color="red")
+
+
+
+t22 <- kable(cont_Nitratos_Granja, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Granja" = 3),bold=T, line=F) %>%
+  pack_rows("Nitratos", 1, 3) %>%
+  add_footnote(c(paste("p-valor McNemar: ",round(Stat_Nitratos_Granja$p.value, digits = 3)),
+                 paste("p-valor Simetría 2x2: ",round(Post_Nitratos_Granja$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+                 )
+               )
+
+```
+
+```{r post-nitratos-biodiversidad, echo=FALSE}
+#POSTHOC Nitratos-Biodiversidad ----
+Post_Nitratos_Biodiversidad = nominalSymmetryTest(cont_Nitratos_Biodiversidad)
+
+cont_Nitratos_Biodiversidad[2,2]<- cell_spec(cont_Nitratos_Biodiversidad[2, 2],"latex", color="red") 
+cont_Nitratos_Biodiversidad[2,3]<- cell_spec(cont_Nitratos_Biodiversidad[2, 3],"latex", color="red") 
+cont_Nitratos_Biodiversidad[3,2]<- cell_spec(cont_Nitratos_Biodiversidad[3, 2],"latex", color="red")  
+cont_Nitratos_Biodiversidad[3,3]<- cell_spec(cont_Nitratos_Biodiversidad[3, 3],"latex", color="red")
+
+t23 <- kable(cont_Nitratos_Biodiversidad, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Biodiversidad" = 3),bold=T, line=F) %>%
+  pack_rows("Nitratos", 1, 3) %>%
+  add_footnote(c(paste("p-valor McNemar: ",round(Stat_Nitratos_Biodiversidad$p.value, digits = 3)),
+                 paste("p-valor Simetría 2x2: ",round(Post_Nitratos_Biodiversidad$Pairwise.symmetry.tests$p.adjust[3], digits = 4))
+                 )
+               )
+
+#POSTHOC Nitratos-Plaguicidas NS ----
+Post_Nitratos_Plaguicidas = nominalSymmetryTest(cont_Nitratos_Plaguicidas)
+
+cont_Nitratos_Plaguicidas[2,2]<- cell_spec(cont_Nitratos_Plaguicidas[2, 2],"latex", color="red") 
+cont_Nitratos_Plaguicidas[2,3]<- cell_spec(cont_Nitratos_Plaguicidas[2, 3],"latex", color="red") 
+cont_Nitratos_Plaguicidas[3,2]<- cell_spec(cont_Nitratos_Plaguicidas[3, 2],"latex", color="red")  
+cont_Nitratos_Plaguicidas[3,3]<- cell_spec(cont_Nitratos_Plaguicidas[3, 3],"latex", color="red")
+
+# knitr::kable(cont_Nitratos_Plaguicidas, format= "latex", booktabs = T,escape = F) %>%
+#   add_header_above(c(" " = 1, "Plaguicidas" = 3),bold=T, line=F) %>%
+#   pack_rows("Nitratos", 1, 3) %>% 
+#   add_footnote(c(paste("p-valor McNemar: ",round(Stat_Nitratos_Plaguicidas$p.value, digits = 3)),
+#                  paste("p-valor Simetría 2x2: ",round(Post_Nitratos_Plaguicidas$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+#                  )
+#                )
+
+
+#POSTHOC Aves-Granja NS----
+Post_Aves_Granja = nominalSymmetryTest(cont_Aves_Granja)
+
+```
+
+```{r post-aves-biodiversidad, echo=FALSE}
+#POSTHOC Aves-Biodiversidad ----
+Post_Aves_Biodiversidad = nominalSymmetryTest(cont_Aves_Biodiversidad)
+
+cont_Aves_Biodiversidad[2,2]<- cell_spec(cont_Aves_Biodiversidad[2, 2],"latex", color="red") 
+cont_Aves_Biodiversidad[2,3]<- cell_spec(cont_Aves_Biodiversidad[2, 3],"latex", color="red") 
+cont_Aves_Biodiversidad[3,2]<- cell_spec(cont_Aves_Biodiversidad[3, 2],"latex", color="red")  
+cont_Aves_Biodiversidad[3,3]<- cell_spec(cont_Aves_Biodiversidad[3, 3],"latex", color="red")
+
+t24 <- kable(cont_Aves_Biodiversidad, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Biodiversidad" = 3),bold=T, line=F) %>%
+  pack_rows("Aves", 1, 3) %>%
+  add_footnote(c(paste("p-valor McNemar: ",round(Stat_Aves_Biodiversidad$p.value, digits = 3)),
+                 paste("p-valor Simetría 2x2: ",round(Post_Aves_Biodiversidad$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+                 )
+               )
+
+#POSTHOC Biodiversidad-Plaguicidas NS ----
+
+Post_Biodiversidad_Plaguicidas = nominalSymmetryTest(cont_Biodiversidad_Plaguicidas)
+
+cont_Biodiversidad_Plaguicidas[2,2]<- cell_spec(cont_Biodiversidad_Plaguicidas[2, 2],"latex", color="red") 
+cont_Biodiversidad_Plaguicidas[2,3]<- cell_spec(cont_Biodiversidad_Plaguicidas[2, 3],"latex", color="red") 
+cont_Biodiversidad_Plaguicidas[3,2]<- cell_spec(cont_Biodiversidad_Plaguicidas[3, 2],"latex", color="red")  
+cont_Biodiversidad_Plaguicidas[3,3]<- cell_spec(cont_Biodiversidad_Plaguicidas[3, 3],"latex", color="red")
+
+
+
+# knitr::kable(cont_Biodiversidad_Plaguicidas, format= "latex", booktabs = T,escape = F) %>%
+#   add_header_above(c(" " = 1, "Plaguicidas" = 3),bold=T, line=F) %>%
+#   pack_rows("Biodiversidad", 1, 3) %>% 
+#   add_footnote(c(paste("p-valor McNemar: ",round(Stat_Biodiversidad_Plaguicidas$p.value, digits = 3)),
+#                  paste("p-valor Simetría 2x2: ",round(Post_Biodiversidad_Plaguicidas$Pairwise.symmetry.tests$p.adjust[3], digits = 3))
+#                  )
+#                )
+
+```
+
+En el análisis *Posthoc*, al comparar la simetría 2x2 de las respuestas de los 7 casos, 6 tuvieron diferencias significativas en el par *No Conozco/No Conozco : Util/Util*. 
+
+En la Tabla \@ref(tab:post-mcnemar) se muestran las tablas de contingencia para los 7 casos y se reportan los valores-p de las pruebas de McNemar y los valores-p del test de simetría 2x2 significativos. Los valores-p de los pares *Inutil/Inutil : No Conozco/No Conozco*  y *Inutil/Inutil : Util/Util* no fueron reportados por no ser significativos. El caso de *Nitratos vs Agua* es el único cuyo valor-p del par *No Conozco/No Conozco : Util/Util* no es significativo pero se reporta por ser de información útil para el análisis *Posthoc*.
+
+\begin{table}[hbtp]
+  \begin{threeparttable}
+  \caption[Análisis Posthoc de las asociaciones entre PPs]{Tablas de contingencia de cada par de PP que explica la difrencia de percepción entre PPs según el test de McNemar} 
+  \label{tab:post-mcnemar}
+    \begin{tabular}{@{}c@{}} % dummy "outer" tabular env.
+      \begin{minipage}{\textwidth}
+        \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t20
+```
+        \caption{}
+        \label{tab:agua-nitratos}
+        \end{subtable}
+\hfill
+        \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t21
+```
+        \caption{}
+        \label{tab:agua-biodiversidad}
+        \end{subtable}
+\hfill
+        \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t22
+```
+        \caption{}
+        \label{tab:nitratos-granja}
+        \end{subtable}
+\hfill
+        \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t23
+```
+        \caption{}
+        \label{tab:nitratos-biodiversidad}
+        \end{subtable}
+\hfill
+        \begin{subtable}[c]{\textwidth}
+\centering
+```{r}
+t24
+```
+        \caption{}
+        \label{tab:aves-biodiversidad}
+        \end{subtable}
+\bigskip
+        \begin{tablenotes}
+        \item[] \tikz\draw[red,fill=red] (0,0) circle (.5ex); Tablas 2x2 con valores p del test de simetría significativos.
+        \end{tablenotes}
+      \end{minipage}
+    \end{tabular} % end of dummy "outer" tabular env.
+\end{threeparttable}
+\end{table}
+
+## Influencia de factores sociodemográficos en la valoración de las PPs {#sociodemo-pps}
+
+En el análisis de la asosiación entre factores sociodemográficos y las valoraciones de las PPs se encontraron 3 casos significativos para los factores "Estudios" y "Origen" (Tabla \@ref(tab:socio-demograficos-politicas)). 
+
+
+```{r socio-demograficos-politicas, echo=FALSE}
+# Tablas de Contingencia por Factor y Politica para hacer Test de Fisher----
+##All_Stats_Sexo ----
+cont_Sexo_Agua <- table(data_copy1$UE_Agua, data_copy1$Sexo)
+Stat_Sexo_Agua = cont_Sexo_Agua %>% all_stats()
+
+cont_Sexo_Aves <- table(data_copy1$UE_Aves, data_copy1$Sexo)
+Stat_Sexo_Aves = cont_Sexo_Aves %>% all_stats()
+
+cont_Sexo_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Sexo)
+Stat_Sexo_Nitratos = cont_Sexo_Nitratos %>% all_stats()
+
+cont_Sexo_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Sexo)
+Stat_Sexo_Granja = cont_Sexo_Granja %>% all_stats()
+
+cont_Sexo_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Sexo)
+Stat_Sexo_Biodiversidad = cont_Sexo_Biodiversidad %>% all_stats()
+
+cont_Sexo_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Sexo)
+Stat_Sexo_Plaguicidas = cont_Sexo_Plaguicidas %>% all_stats()
+
+# a ver si puedo hacer bind de las stats
+All_Stats_Sexo <- cbind(Stat_Sexo_Agua,Stat_Sexo_Aves, Stat_Sexo_Nitratos,Stat_Sexo_Granja,Stat_Sexo_Biodiversidad,Stat_Sexo_Plaguicidas )
+rownames(All_Stats_Sexo) <- c("Sexo")
+
+##All_Stats_Origen
+cont_Origen_Agua <- table(data_copy1$UE_Agua, data_copy1$Origen)
+Stat_Origen_Agua = cont_Origen_Agua %>% all_stats()
+
+cont_Origen_Aves <- table(data_copy1$UE_Aves, data_copy1$Origen)
+Stat_Origen_Aves = cont_Origen_Aves %>% all_stats()
+
+cont_Origen_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Origen)
+Stat_Origen_Nitratos = cont_Origen_Nitratos %>% all_stats()
+
+cont_Origen_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Origen)
+Stat_Origen_Granja = cont_Origen_Granja %>% all_stats()
+
+cont_Origen_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Origen)
+Stat_Origen_Biodiversidad = cont_Origen_Biodiversidad %>% all_stats()
+
+cont_Origen_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Origen)
+Stat_Origen_Plaguicidas = cont_Origen_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Origen <- cbind(Stat_Origen_Agua,Stat_Origen_Aves, Stat_Origen_Nitratos,Stat_Origen_Granja,Stat_Origen_Biodiversidad,Stat_Origen_Plaguicidas )
+rownames(All_Stats_Origen) <- c("Origen")
+
+##All_Stats_Joven ----
+cont_Joven_Agua <- table(data_copy1$UE_Agua, data_copy1$factor_joven)
+Stat_Joven_Agua = cont_Joven_Agua %>% all_stats()
+
+cont_Joven_Aves <- table(data_copy1$UE_Aves, data_copy1$factor_joven)
+Stat_Joven_Aves = cont_Joven_Aves %>% all_stats()
+
+cont_Joven_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$factor_joven)
+Stat_Joven_Nitratos = cont_Joven_Nitratos %>% all_stats()
+
+cont_Joven_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$factor_joven)
+Stat_Joven_Granja = cont_Joven_Granja %>% all_stats()
+
+cont_Joven_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$factor_joven)
+Stat_Joven_Biodiversidad = cont_Joven_Biodiversidad %>% all_stats()
+
+cont_Joven_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$factor_joven)
+Stat_Joven_Plaguicidas = cont_Joven_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Joven <- cbind(Stat_Joven_Agua,Stat_Joven_Aves, Stat_Joven_Nitratos,Stat_Joven_Granja,Stat_Joven_Biodiversidad,Stat_Joven_Plaguicidas )
+rownames(All_Stats_Joven) <- c("Joven")
+
+
+##All_Stats_EStudios ----
+
+cont_Estudios_Agua <- table(data_copy1$UE_Agua, data_copy1$Estudios)
+Stat_Estudios_Agua = cont_Estudios_Agua %>% all_stats()
+
+cont_Estudios_Aves <- table(data_copy1$UE_Aves, data_copy1$Estudios)
+Stat_Estudios_Aves = cont_Estudios_Aves %>% all_stats()
+
+cont_Estudios_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Estudios)
+Stat_Estudios_Nitratos = cont_Estudios_Nitratos %>% all_stats()
+
+cont_Estudios_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Estudios)
+Stat_Estudios_Granja = cont_Estudios_Granja %>% all_stats()
+
+cont_Estudios_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Estudios)
+Stat_Estudios_Biodiversidad = cont_Estudios_Biodiversidad %>% all_stats()
+
+cont_Estudios_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Estudios)
+Stat_Estudios_Plaguicidas = cont_Estudios_Plaguicidas %>% all_stats()
+
+# bind
+All_Stats_Estudios <- cbind(Stat_Estudios_Agua,Stat_Estudios_Aves, Stat_Estudios_Nitratos,
+                            Stat_Estudios_Granja,Stat_Estudios_Biodiversidad,Stat_Estudios_Plaguicidas )
+rownames(All_Stats_Estudios) <- c("Estudios")
+
+
+
+##All_Stats_Politicas: Tabla de Contingencia de Todas las Politicas ----
+All_Sociodemo_Politicas <- rbind(All_Stats_Estudios, All_Stats_Joven, All_Stats_Origen, All_Stats_Sexo)
+colnames(All_Sociodemo_Politicas) <- c("Agua", "Aves", "Nitratos", "Granja", "Biodiversidad", "Plaguicidas")
+
+knitr::kable(All_Sociodemo_Politicas, format= "latex",
+             caption = "Valores p de las pruebas de Fisher para cada factor sociodemográfico y política ", booktabs = T,escape = F, caption.short = "Asociación entre factores sociodemográficos y PPs", fig.pos = "H") %>% 
+  add_footnote("Nivel de significancia ($p<0.05$) $\\rightarrow$  Alto = ***, Medio = ** y Bajo = *", notation="alphabet", escape = F) %>% 
+  kable_styling(latex_options = "HOLD_position")
+```
+
+```{r post-estudios-granja, warning = FALSE, echo=FALSE}
+
+
+#Estudios-Granja-stdres ----
+Post_Estudios_Granja_stdres <- chisq.test(cont_Estudios_Granja)$stdres
+
+# Post_Estudios_Granja_stdres <- chisq.test(cont_Estudios_Granja)$stdres
+# Post_Estudios_Granja_stdres2 <- apply(Post_Estudios_Granja_stdres,MARGIN=2,FUN=stdres_tab)
+# colnames(Post_Estudios_Granja_stdres2) <- c("Priamrio","Secundario", "Universitario")
+# rownames(Post_Estudios_Granja_stdres2) <- rownames(Post_Estudios_Granja_stdres)
+
+Post_Estudios_Granja_stdres2<- cont_Estudios_Granja
+Post_Estudios_Granja_stdres2[2,2]<- "\\textcolor{blue}{\\textbf{10 +$^{*}$}}"
+Post_Estudios_Granja_stdres2[3,3]<- "\\textcolor{blue}{\\textbf{10 +$^{**}$}}"
+                     
+
+# knitr::kable(Post_Estudios_Granja_stdres2, format= "latex", caption = "Residuos estandarizados de la prueba de ${\\chi}^2$ de Granja vs Estudios. Donde ", booktabs = T,escape = F) %>%
+#   add_header_above(c(" " = 1, "Estudios" = 3),bold=T, line=F) %>%
+#   pack_rows("Granja", 1, 3) %>%
+#   add_footnote(c("+ = Asociación positiva", "- = Asociación negativa","Nivel de significancia ($p<0.05$) $\\rightarrow$  $^{*}=$ Bajo, $^{**}=$ Medio, $^{***}=$ Alto, ns = no significativo"), notation="alphabet", escape=F)
+
+t10 <- kable(Post_Estudios_Granja_stdres2, format= "latex", booktabs = T,escape = F) %>%
+  add_header_above(c(" " = 1, "Estudios" = 3),bold=T, line=F) %>%
+  pack_rows("Granja", 1, 3) 
+
+```
+
+Para cada par factor sociodemográfico-política que resultó significativamente relacionado se reportaron las tablas de contingencia. Con el fin de analizar la tendencias de respuesta de los grupos dentro de cada factor se reportan en azul aquellas respuestas cuyos residuos estandarizados de la prueba de ${\chi}^2$ es significativa (Tablas \@ref(tab:estudios-posthoc) y \@ref(tab:origen-posthoc)). Además se reportaron asosiaciones positivas y negativas mediante un "$+$" y un "$-$" respectivamente. Por ejemplo en la Tabla \@ref(tab:estudios-posthoc) se observa una asociación positiva entre la respuesta "No Conozco" y la categoría de estudio "Secundario".
+
+
+\begin{table}[h!]
+\caption[Asociación entre Estudios y PPs]{Tablas de contingencia donde el factor Estudios tuvo una asociación significativa con la PP "\textit{Granja}".}
+\label{tab:estudios-posthoc}
+ \centering
+  \begin{threeparttable}
+```{r}
+t10
+```
+  \end{threeparttable}
+  \quad
+  \begin{minipage}{\linewidth}
+     \begin{threeparttable}
+      \begin{tablenotes}
+      \item[a] \tikz\draw[blue,fill=blue] (0,0) circle (.5ex); Valores significativos, donde nivel de significancia ($p<0.05$) $\rightarrow$ Alto = ***, \newline 
+      Medio = ** y Bajo = *
+      \item[b] $+$ $\rightarrow$ Correlación positiva.
+      \item[c] $-$ $\rightarrow$ Correlación negativa.
+      \end{tablenotes}
+     \end{threeparttable}
+  \end{minipage}
+\end{table}
+
+```{r post-origen-aves, warning = FALSE, echo=FALSE}
+
+#Origen-Aves-stdres ----
+Post_Origen_Aves_stdres <- chisq.test(cont_Origen_Aves)$stdres
+
+# Post_Origen_Aves_stdres <- chisq.test(cont_Origen_Aves)$stdres
+# Post_Origen_Aves_stdres2 <- apply(Post_Origen_Aves_stdres,MARGIN=2,FUN=stdres_tab)
+# colnames(Post_Origen_Aves_stdres2) <- c("Neorrural","Rural")
+# rownames(Post_Origen_Aves_stdres2) <- rownames(Post_Origen_Aves_stdres)
+
+Post_Origen_Aves_stdres2<- cont_Origen_Aves
+Post_Origen_Aves_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{0 -$^{*}$}}"
+Post_Origen_Aves_stdres2[1,2]<-"\\textcolor{blue}{\\textbf{4 +$^{*}$}}"
+
+t1 <- kable(Post_Origen_Aves_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Origen" = 2),bold=T, line=F) %>% 
+  pack_rows("Aves", 1, 3)
+
+```
+
+```{r post-origen-granja, warning = FALSE, echo=FALSE}
+
+#Origen-Granja-stdres ----
+Post_Origen_Granja_stdres <- chisq.test(cont_Origen_Granja)$stdres
+
+# Post_Origen_Granja_stdres <- chisq.test(cont_Origen_Granja)$stdres
+# Post_Origen_Granja_stdres2 <- apply(Post_Origen_Granja_stdres,MARGIN=2,FUN=stdres_tab)
+# colnames(Post_Origen_Granja_stdres2) <- c("Neorrural","Rural")
+# rownames(Post_Origen_Granja_stdres2) <- rownames(Post_Origen_Granja_stdres)
+
+Post_Origen_Granja_stdres2 <- cont_Origen_Granja
+Post_Origen_Granja_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{1 -$^{**}$}}"
+Post_Origen_Granja_stdres2[1,2]<- "\\textcolor{blue}{\\textbf{8 +$^{**}$}}"
+
+t2  <-kable(Post_Origen_Granja_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Origen" = 2),bold=T, line=F) %>% 
+  pack_rows("Granja", 1, 3)
+```
+
+\begin{table}
+ \centering
+  \begin{threeparttable}
+  \caption[ASociación entre el factor Origen y PPs]{Tablas de contingencia donde el factor Origen tuvo una asosiación significativa con las PPs (a) "\textit{Aves}" y (b) "\textit{Granja}".}
+\label{tab:origen-posthoc}
+  \begin{tabular}{@{}c@{}} % dummy "outer" tabular env.
+\begin{minipage}{\textwidth}
+
+\begin{subtable}[b]{0.4\textwidth}
+
+```{r}
+t1
+```
+  \caption{}
+  \label{tab:origen-aves}
+\end{subtable}
+\hfill
+ \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t2
+```
+    \caption{}
+      \label{tab:origen-granja}
+\end{subtable}
+\hfill
+\end{minipage}
+\end{tabular} % end of dummy "outer" tabular env.
+\end{threeparttable}
+
+  \begin{minipage}{\linewidth}
+     \begin{threeparttable}
+      \begin{tablenotes}
+      \item[a] \tikz\draw[blue,fill=blue] (0,0) circle (.5ex); Valores significativas, donde nivel de significancia ($p<0.05$) $\rightarrow$ Alto = ***, \newline 
+      Medio = ** y Bajo = *
+      \item[b] $+$ $\rightarrow$ Correlación positiva.
+      \item[c] $-$ $\rightarrow$ Correlación negativa.
+      \end{tablenotes}
+     \end{threeparttable}
+  \end{minipage}
+\end{table}
+
+## Influencia de factores técnico productivos en la valoración de las PPs
+
+Al igual que en la sección \@ref(sociodemo-pps) se reportaron todos los valores-p para cada par factor-PP y se encontraron 5 casos significativos para los factores "Área" e "Invernadero" (Tabla \@ref(tab:tecnico-productivos-politicas)).
+
+
+```{r tecnico-productivos-politicas}
+
+##All_Stats_Area ----
+
+cont_Area_Agua <- table(data_copy1$UE_Agua, data_copy1$Area_Total)
+Stat_Area_Agua = cont_Area_Agua %>% all_stats()
+
+cont_Area_Aves <- table(data_copy1$UE_Aves, data_copy1$Area_Total)
+Stat_Area_Aves = cont_Area_Aves %>% all_stats()
+
+cont_Area_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Area_Total)
+Stat_Area_Nitratos = cont_Area_Nitratos %>% all_stats()
+
+
+cont_Area_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Area_Total)
+Stat_Area_Granja = cont_Area_Granja %>% all_stats()
+
+cont_Area_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Area_Total)
+Stat_Area_Biodiversidad = cont_Area_Biodiversidad %>% all_stats()
+
+cont_Area_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Area_Total)
+Stat_Area_Plaguicidas = cont_Area_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Area <- cbind(Stat_Area_Agua,Stat_Area_Aves, Stat_Area_Nitratos,Stat_Area_Granja,Stat_Area_Biodiversidad,Stat_Area_Plaguicidas )
+rownames(All_Stats_Area) <- c("Area")
+
+##All_Stats_Invernadero ----
+
+cont_Invernadero_Agua <- table(data_copy1$UE_Agua, data_copy1$Invernadero)
+Stat_Invernadero_Agua = cont_Invernadero_Agua %>% all_stats()
+
+cont_Invernadero_Aves <- table(data_copy1$UE_Aves, data_copy1$Invernadero)
+Stat_Invernadero_Aves = cont_Invernadero_Aves %>% all_stats()
+
+cont_Invernadero_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Invernadero)
+Stat_Invernadero_Nitratos = cont_Invernadero_Nitratos %>% all_stats()
+
+cont_Invernadero_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Invernadero)
+Stat_Invernadero_Granja = cont_Invernadero_Granja %>% all_stats()
+
+cont_Invernadero_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Invernadero)
+Stat_Invernadero_Biodiversidad = cont_Invernadero_Biodiversidad %>% all_stats()
+
+cont_Invernadero_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Invernadero)
+Stat_Invernadero_Plaguicidas = cont_Invernadero_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Invernadero <- cbind(Stat_Invernadero_Agua,Stat_Invernadero_Aves, Stat_Invernadero_Nitratos,Stat_Invernadero_Granja,Stat_Invernadero_Biodiversidad,Stat_Invernadero_Plaguicidas )
+rownames(All_Stats_Invernadero) <- c("Invernadero")
+
+
+##All_Stats_Propia ----
+
+cont_Propia_Agua <- table(data_copy1$UE_Agua, data_copy1$Propia)
+Stat_Propia_Agua = cont_Propia_Agua %>% all_stats()
+
+cont_Propia_Aves <- table(data_copy1$UE_Aves, data_copy1$Propia)
+Stat_Propia_Aves = cont_Propia_Aves %>% all_stats()
+
+cont_Propia_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Propia)
+Stat_Propia_Nitratos = cont_Propia_Nitratos %>% all_stats()
+
+cont_Propia_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Propia)
+Stat_Propia_Granja = cont_Propia_Granja %>% all_stats()
+
+cont_Propia_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Propia)
+Stat_Propia_Biodiversidad = cont_Propia_Biodiversidad %>% all_stats()
+
+cont_Propia_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Propia)
+Stat_Propia_Plaguicidas = cont_Propia_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Propia <- cbind(Stat_Propia_Agua,Stat_Propia_Aves, Stat_Propia_Nitratos,Stat_Propia_Granja,Stat_Propia_Biodiversidad,Stat_Propia_Plaguicidas )
+rownames(All_Stats_Propia) <- c("Propia")
+
+##All_Stats_Variedades ----
+
+cont_Variedades_Agua <- table(data_copy1$UE_Agua, data_copy1$Variedades)
+Stat_Variedades_Agua = cont_Variedades_Agua %>% all_stats()
+
+cont_Variedades_Aves <- table(data_copy1$UE_Aves, data_copy1$Variedades)
+Stat_Variedades_Aves = cont_Variedades_Aves %>% all_stats()
+
+cont_Variedades_Nitratos <- table(data_copy1$UE_Nitratos, data_copy1$Variedades)
+Stat_Variedades_Nitratos = cont_Variedades_Nitratos %>% all_stats()
+
+cont_Variedades_Granja <- table(data_copy1$UE_Granja_A_La_Mesa, data_copy1$Variedades)
+Stat_Variedades_Granja = cont_Variedades_Granja %>% all_stats()
+
+cont_Variedades_Biodiversidad <- table(data_copy1$UE_Biodiversidad, data_copy1$Variedades)
+Stat_Variedades_Biodiversidad = cont_Variedades_Biodiversidad %>% all_stats()
+
+cont_Variedades_Plaguicidas <- table(data_copy1$UE_Directiva_Plaguicidas, data_copy1$Variedades)
+Stat_Variedades_Plaguicidas = cont_Variedades_Plaguicidas %>% all_stats()
+
+# Bind
+All_Stats_Variedades <- cbind(Stat_Variedades_Agua,Stat_Variedades_Aves, Stat_Variedades_Nitratos,Stat_Variedades_Granja,Stat_Variedades_Biodiversidad,Stat_Variedades_Plaguicidas )
+rownames(All_Stats_Variedades) <- c("Variedades")
+
+
+##All_Stats_Politicas: Tabla de Contingencia de Todas las Politicas ----
+
+All_Tecnicoproductivas_Politicas <- rbind(All_Stats_Area, All_Stats_Invernadero, All_Stats_Propia, All_Stats_Variedades)
+colnames(All_Tecnicoproductivas_Politicas) <- c("Agua", "Aves", "Nitratos", "Granja", "Biodiversidad", "Plaguicidas")
+
+knitr::kable(All_Tecnicoproductivas_Politicas, format= "latex",
+               caption = "Valores p de las pruebas de Fisher para cada factor técnico productivo y política ", booktabs = T,escape = F, caption.short = "Asociación entre factores técnicos productivos y PPs") %>% 
+  add_footnote("Nivel de significancia ($p<0.05$) $\\rightarrow$  Alto = ***, Medio = ** y Bajo = *", notation="alphabet", escape = F) %>% 
+    kable_styling(latex_options = "HOLD_position")
+  
+```
+
+```{r post-area-granja, warning = FALSE, echo=FALSE}
+
+#Area-Granja-stdres ----
+Post_Area_Granja_stdres <- chisq.test(cont_Area_Granja)$stdres
+
+Post_Area_Granja_stdres2 <- cont_Area_Granja
+Post_Area_Granja_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{0 -$^{**}$}}"
+Post_Area_Granja_stdres2[2,1]<- "\\textcolor{blue}{\\textbf{17 +$^{***}$}}"
+Post_Area_Granja_stdres2[1,4]<- "\\textcolor{blue}{\\textbf{3 +$^{*}$}}"
+
+t6<- kable(Post_Area_Granja_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Area" = 4),bold=T, line=F) %>% 
+  pack_rows("Granja", 1, 3)
+  
+```
+
+```{r post-area-plaguicidas, warning = FALSE, echo=FALSE}
+
+#Area-Plaguicidas-stdres ----
+Post_Area_Plaguicidas_stdres <- chisq.test(cont_Area_Plaguicidas)$stdres
+
+Post_Area_Plaguicidas_stdres2 <- cont_Area_Plaguicidas
+Post_Area_Plaguicidas_stdres2[2,1]<- "\\textcolor{blue}{\\textbf{18 +$^{**}$}}"
+Post_Area_Plaguicidas_stdres2[2,3]<- "\\textcolor{blue}{\\textbf{1 -$^{*}$}}"
+Post_Area_Plaguicidas_stdres2[2,4]<- "\\textcolor{blue}{\\textbf{1 -$^{*}$}}"
+Post_Area_Plaguicidas_stdres2[3,1]<- "\\textcolor{blue}{\\textbf{5 -$^{*}$}}"
+Post_Area_Plaguicidas_stdres2[3,4]<- "\\textcolor{blue}{\\textbf{5 +$^{*}$}}"
+
+t7<- kable(Post_Area_Plaguicidas_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Area" = 4),bold=T, line=F) %>% 
+  pack_rows("Plaguicidas", 1, 3)
+  
+
+```
+
+\begin{table}
+
+ \centering
+  \begin{threeparttable}
+  \caption[Asociación entre el factor Área y PPs]{Tablas de contingencia donde el factor Area tuvo una asosiación significativa con alguna PP.}
+  \label{tab:area-posthoc}
+\begin{tabular}{@{}c@{}} % dummy "outer" tabular env.
+\begin{minipage}{\textwidth}
+
+\begin{subtable}[b]{\textwidth}
+\centering
+```{r}
+t6
+```
+ \caption{}
+ \label{tab:area-granja}
+\end{subtable}
+\hfill
+
+\begin{subtable}[b]{\textwidth}
+\centering
+```{r}
+t7
+```
+ \caption{}
+  \label{tab:area-plaguicidas}
+\end{subtable}
+\hfill
+\end{minipage}
+\end{tabular}
+  \end{threeparttable}
+  \begin{minipage}{\linewidth}
+     \begin{threeparttable}
+      \begin{tablenotes}
+      \item[a] \tikz\draw[blue,fill=blue] (0,0) circle (.5ex); Valores significativas, donde nivel de significancia ($p<0.05$) $\rightarrow$ Alto = ***, \newline 
+      Medio = ** y Bajo = *
+      \item[b] $+$ $\rightarrow$ Correlación positiva.
+      \item[c] $-$ $\rightarrow$ Correlación negativa.
+      \end{tablenotes}
+     \end{threeparttable}
+  \end{minipage}
+\end{table}
+
+
+```{r post-invernadero-agua, warning = FALSE, echo=FALSE}
+
+#Invernadero-Agua-stdres ----
+
+Post_Invernadero_Agua_stdres <- chisq.test(cont_Invernadero_Agua)$stdres
+
+Post_Invernadero_Agua_stdres2 <- cont_Invernadero_Agua
+Post_Invernadero_Agua_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{3 -$^{*}$}}"
+Post_Invernadero_Agua_stdres2[1,2]<- "\\textcolor{blue}{\\textbf{6 +$^{*}$}}"
+
+
+t3<- kable(Post_Invernadero_Agua_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Invernadero" = 2),bold=T, line=F) %>% 
+  pack_rows("Agua", 1, 3)
+  
+```
+
+```{r post-invernadero-aves, warning = FALSE, echo=FALSE}
+
+#Invernadero-Aves-stdres ----
+Post_Invernadero_Aves_stdres <- chisq.test(cont_Invernadero_Aves)$stdres
+
+Post_Invernadero_Aves_stdres2 <- cont_Invernadero_Aves
+Post_Invernadero_Aves_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{0 -$^{**}$}}"
+Post_Invernadero_Aves_stdres2[1,2]<- "\\textcolor{blue}{\\textbf{4 +$^{**}$}}"
+
+t4 <- kable(Post_Invernadero_Aves_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Invernadero" = 2),bold=T, line=F) %>% 
+  pack_rows("Aves", 1, 3)
+  
+
+```
+
+```{r post-invernadero-nitratos, warning = FALSE, echo=FALSE}
+
+#Invernadero-Nitratos-stdres -----
+Post_Invernadero_Nitratos_stdres <- chisq.test(cont_Invernadero_Nitratos)$stdres
+
+Post_Invernadero_Nitratos_stdres2 <- cont_Invernadero_Nitratos
+Post_Invernadero_Nitratos_stdres2[1,1]<- "\\textcolor{blue}{\\textbf{0 -$^{**}$}}"
+Post_Invernadero_Nitratos_stdres2[1,2]<- "\\textcolor{blue}{\\textbf{3 +$^{**}$}}"
+
+t5<- kable(Post_Invernadero_Nitratos_stdres2, format= "latex", booktabs = T,escape = F) %>% 
+  add_header_above(c(" " = 1, "Invernadero" = 2),bold=T, line=F) %>% 
+  pack_rows("Nitratos", 1, 3)
+  
+
+```
+
+Para cada caso significativo se presentaron las tablas de contingencia resaltando en azul las respuestas con significancia para el análisis (Tabla \@ref(tab:area-posthoc) y \@ref(tab:invernadero-posthoc)).
+
+\begin{table}
+ \centering
+  \begin{threeparttable}
+  \caption[Asociación entre el factor Invernadero y PPs]{Tablas de contingencia donde el factor Invernadero tuvo una asosiación significativa con alguna PP.}
+  \label{tab:invernadero-posthoc}
+  \begin{tabular}{@{}c@{}} % dummy "outer" tabular env.
+\begin{minipage}{\textwidth}
+
+\begin{subtable}[b]{\textwidth}
+\centering
+```{r}
+t3
+```
+ \caption{}
+ \label{tab:invernadero-agua}
+\end{subtable}
+\hfill
+  
+\begin{subtable}[b]{0.4\textwidth}
+```{r}
+t4
+```
+  \caption{}
+\label{tab:invernadero-aves}
+\end{subtable}
+\hfill
+ \begin{subtable}[b]{0.4\textwidth}
+```{r}
+t5
+```
+ \caption{}
+ \label{tab:invernadero-nitratos}
+\end{subtable}
+\hfill
+\end{minipage}
+\end{tabular}
+  \end{threeparttable}
+  \begin{minipage}{\linewidth}
+     \begin{threeparttable}
+      \begin{tablenotes}
+      \item[a] \tikz\draw[blue,fill=blue] (0,0) circle (.5ex); Valores significativas, donde nivel de significancia ($p<0.05$) $\rightarrow$ Alto = ***, \newline 
+      Medio = ** y Bajo = *
+      \item[b] $+$ $\rightarrow$ Correlación positiva.
+      \item[c] $-$ $\rightarrow$ Correlación negativa.
+      \end{tablenotes}
+     \end{threeparttable}
+  \end{minipage}
+\end{table}

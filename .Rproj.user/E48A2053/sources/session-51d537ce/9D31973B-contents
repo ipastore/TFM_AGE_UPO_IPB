@@ -1,0 +1,445 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  bookdown::pdf_document2:
+    template: templates/template.tex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Materiales y Métodos {#mat-met}
+
+## Marco del proyecto
+
+El presente trabajo se realizó en el marco del proyecto **FARMERS - Encuesta a agricultores sobre la adopción potencial y los impactos económicos de las tecnologías para reducir el uso y el riesgo de pesticidas químicos en la agricultura de la UE** de la fundación **FORMIT** financiado por el **Centro Común de Investigación (CCI)** de la **UE**.
+
+El proyecto se centra en una consulta a nivel europeo y la posterior recopilación de datos sobre técnicas seleccionadas de reducción de plaguicidas en cuatro estudios de casos regionales realizados en España (Andalucía y Extremadura), Alemania (Baviera y Baja Sajonia), Italia (Véneto y Piamonte) y la República Checa (República Bohemia Central y Moravia del Sur).
+
+Con el fin de acotar el alcance, para cada país se eligió una técnica de reducción de plaguicidas y un cultivo en particular.
+En Alemania, se realizó una encuesta estadística sobre el uso de GPS para controlar la fumigación de pesticidas.
+En Italia, el estudio se centró en el control mecánico de hierbas adventicias en viñedos.
+En la República Checa, se estudió la rotación de cultivos en cultivos de trigo.
+En España las encuestas fueron focalizadas en la aplicación de la GIP para el cultivo de tomate.
+Específicamaente, este trabajo se basó en la base de datos generada a partir de entrevistas en campo estructuradas a productores de tomate ecológico.
+
+Se encuestó a una totalidad de 55 agricultores seleccionados a conveniencia a partir de una metodología de "bola de nieve".
+En la Sección \@ref(caracterizacion-demo) se detalla la caracterización sociodemográfica y técnico productiva de la muestra.
+
+## Políticas Públicas
+
+Como se detalla en la sección \@ref(PPs) se eligieron 7 PPs relacionadas a la transición agroecológica agrupadas en 6 grupos:
+
+-   Estrategia De la granja a la mesa.
+-   Directiva sobre el uso sostenible de plaguicidas.
+-   Directiva de Aves y Directiva de Hábitats.
+-   Estrategia sobre la Biodiversidad 2030.
+-   Directiva de Nitratos.
+-   Directiva Marco del Agua.
+
+Las Directivas de Aves y Directiva de Hábitats fueron agrupadas por considerarse convergentes.
+
+Las PPs fueron evaluadas con una variale nominal de 3 niveles:
+
+-   Útil $\rightarrow$ la PP es percibida como útil.
+-   Inutil $\rightarrow$ la PP es percibida como inutil.
+-   No conozco $\rightarrow$ Desconoce la PP.
+
+## Factores Sociodemográficos
+
+### Edad
+
+Edad del agricultor, variable nominal con 2 niveles:
+
+-   Joven $\rightarrow$ $\leq 44\ años$.
+-   Experimentado $\rightarrow$ $> 44\ años$.
+
+### Origen
+
+Rural o Neorrural, variable nominal con 2 niveles:
+
+-   Neorrural $\rightarrow$\
+                           $(Factor\_neo<30\ años \bigcap Ea \leq 2\ años)$\
+                                              $\bigcup$\
+                           $(Factor\_neo \geq 30\ años \bigcap Ea \leq 15\ años)$
+
+-   Rural $\rightarrow$ Resto de la muestra.
+
+Donde $Factor\_neo$ = $(Edad - Ea)$ y $Ea$ = $Experiencia\ como\ agricultor$.
+
+### Sexo
+
+Sexo del agricultor, variable nominal con 2 niveles.
+
+-   F $\rightarrow$ femenino.
+-   M $\rightarrow$ masculino.
+
+### Estudios
+
+Nivel de estudios del agricultor, variable nominal con 3 niveles.
+
+-   Primario.
+-   Secundario.
+-   Universitario.
+
+## Factores Técnicos Productivos
+
+### Area_Total
+
+Area Total de la Superficie Agraria Utilizada (SAU), variable nominal con 4 niveles.
+
+-   Micro $\rightarrow$ $\leq 500\ m^2$
+-   Pequeño $\rightarrow (500m\ ^2 - 2\ ha]$
+-   Mediano $\rightarrow (2\ ha - 4\ ha]$
+-   Grande $\rightarrow (4\ ha -20\ ha]$
+
+### Variedades
+
+Variedades cultivadas, variable nominal con 3 niveles:
+
+-   1 $\rightarrow$ 1 variedad.
+
+-   2 $\rightarrow$ 2 variedades.
+
+-   3 $\rightarrow$ $>2$ variedades.
+
+### Invernadero
+
+Variable nominal con 2 niveles:
+
+-   Si $\rightarrow$ cultiva bajo invernadero.
+-   No $\rightarrow$ no cultiva bajo invernadero.
+
+### Propia
+
+Variable nominal con 2 niveles:
+
+-   Si $\rightarrow$ es propietario.
+-   No $\rightarrow$ no es propietario.
+
+## Análisis estadístico
+
+Con el objetivo de comparar las valoraciones entre las PPs se realizaron múltiples pruebas de McNemar-Bowker con variables nominales pareadas y un valor-p $< 0.05$.
+El test de McNemar-Bowker pierde fiabilidad cuando algunas celdas cuentan con 0 casos [@handbook-R-Man].
+Estos casos fueron también seleccionados para el análisis *Post hoc*
+
+Para el análisis *Post hoc* se realizaron pruebas de siemtría agrupando factores en una tabla de contingencia de 2x2 y se utilizó un método de correción de valor-p de Benjamini-Hochberg.
+Se reportó una tabla con todas las tablas de contingencia marcando en rojo las tablas 2x2 con diferencias significativas (valor-p $<0.5$) .
+
+Para el análisis de correlación entre variables nominales se suele usar un test de ${\chi}^2$ (chi-cuadrado) pero dado que para algunas categorías se contó con menos de 5 respuestas se procedió a utilizar el test Exacto de Fisher.
+Así, tanto para los factores sociodemográficos como para los técnicos productivos, se realizaron múltiples test Exactos de Fisher con el fin de correlacionar los factores con las PPs.
+Se utilizaron variables nominales no pareadas y un valor-p $< 0.05$.
+
+Para el análisis *Post hoc* se utilizaron los residuos estandarizados de la prueba de ${\chi}^2$ para encontrar los factores más determinantes a pesar de que estadísticamente no se relacionan estrictamente con la prueba Exacta de Fisher.
+Celdas cuyos valores absolutos residuos estandarizados son mayores a 1,96 indica una diferencia significativa al valor esperado en la prueba de ${\chi}^2$ (análogo a un valor-p $< 0.05$).
+
+## Herramientas software
+
+El tratamiento de datos y el análisis estadístico fue realizado en R.
+
+## Caracterización de la muestra {#caracterizacion-demo}
+
+El número total de agricultores entrevistados fue de 55. En la figura \@ref(fig:mapa-tomate) se muestra la distribución geográfica diferenciados según el tamaño de la SAU. En la Tabla \@ref(tab:tabla-caracterizacion) se muestran los porcentajes de la muestra según factores sociodemográficos y técnicos productivos. 
+
+
+```{r mapa-tomate, echo = FALSE, fig.cap="Distribución de los productores de tomate según tamaño de la SAU", out.width='90%', fig.align='center', fig.pos="hbtp", fig.scap="Mapa de entrevistados"}
+knitr::include_graphics("figures/mapa-tomate.png")
+```
+
+```{r cargo-data, echo = FALSE, echo = FALSE, warning=FALSE, message=FALSE, error=FALSE}
+#Cargo paquetes ----
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readr)
+library(ggrepel)
+library(pander)
+library(ggthemes)
+library(data.table)
+library(rlang)
+library(tibble)
+library(treemapify)
+library(ggsankey)
+library(circlize)
+library(treemap)
+library(vcd)
+library(rcompanion)
+library(modeest)
+library(psych)
+library(ggstatsplot)
+library(FSA)
+library(DescTools)
+library(multcompView)
+library(coin)
+library(RVAideMemoire)
+library(kableExtra)
+library(rcompanion)
+
+
+#Cargo Archivo----
+#Cargo el CSV que esta limitado con un ; por sel de MACOS?
+data <- read_csv("/Users/ignaciopastorebenaim/Documents/TFM/R_archives/data/data_factor.csv")
+
+#Paso char a factor
+data[sapply(data, is.character)] <- lapply(data[sapply(data, is.character)], as.factor)
+
+#Copio a data_copy1
+data_copy1 <- data
+
+#Corrijo level de Factores_Impacto_Ambiental
+data_copy1$Factores_Impacto_Ambiental <-as.character(data_copy1$Factores_Impacto_Ambiental)
+data_copy1$Factores_Impacto_Ambiental <- factor(data_copy1$Factores_Impacto_Ambiental , levels= c("Muy Importante", "Importante", "Poco Importante", "Nada Importante", "Ns/Nc"))
+
+#Corrijo level de Factores_Impacto_Mundo Mejor
+data_copy1$Factores_Mundo_Mejor <-as.character(data_copy1$Factores_Mundo_Mejor)
+data_copy1$Factores_Mundo_Mejor <- factor(data_copy1$Factores_Mundo_Mejor , levels= c("Muy Importante", "Importante", "Poco Importante", "Nada Importante", "Ns/Nc"))
+
+#Corrijo level de Afirmaciones_Convencional
+data_copy1$Afirmaciones_Convencional_Sostenible <-as.character(data_copy1$Afirmaciones_Convencional_Sostenible)
+data_copy1$Afirmaciones_Convencional_Sostenible <- factor(data_copy1$Afirmaciones_Convencional_Sostenible , levels= c("De Acuerdo", "Ni de Acuerdo, Ni en Desacuerdo", "En Desacuerdo", "Ns/Nc"))
+
+#Corrijo level de Afirmaciones_Altos_Rend
+data_copy1$Afirmaciones_Altos_Rendimientos_Sin_Pesticidas <-as.character(data_copy1$Afirmaciones_Altos_Rendimientos_Sin_Pesticidas)
+data_copy1$Afirmaciones_Altos_Rendimientos_Sin_Pesticidas <- factor(data_copy1$Afirmaciones_Altos_Rendimientos_Sin_Pesticidas , levels= c("De Acuerdo", "Ni de Acuerdo, Ni en Desacuerdo", "En Desacuerdo", "Ns/Nc"))
+
+##Tamano Area_Total
+data_copy1$Area_Total <- cut(
+  data_copy1$Area_Total, breaks = c(1,5000, 20000, 40000, 200000), labels = c("Micro", "Pequeño", "Mediano", "Grande"))
+
+##Tamano Area_Total
+data_copy1$Variedades <- cut(
+  data_copy1$Variedades, breaks = c(0,1, 2, 11), labels = c("1", "2", "2+"))
+
+
+##Saco factor joven <44 anos
+data_copy1 <- data_copy1 %>% mutate(
+  factor_joven = data_copy1$Anos)
+
+data_copy1$factor_joven <- cut(
+  data_copy1$factor_joven, breaks = c(1,44,100), labels = c("Joven", "Experimentado"))
+
+##Saco factor_neorurral: armo columna de anos-anos_agricultor(edad a la que se convirtieron)
+data_copy1 <- data_copy1 %>% mutate(
+  factor_neorrural = data_copy1$Anos - data_copy1$Anos_agricultor)
+
+##Armo columna nueva con condiciones >=30 & <= 15 o >30 & <=2
+data_copy1 <- data_copy1 %>% mutate(
+  Origen = ifelse(factor_neorrural >= 30 & Anos_agricultor <= 15,
+                  "Neorrural",
+                  ifelse(factor_neorrural < 30 & Anos_agricultor <=2,
+                         "Neorrural",
+                         "Rural")
+  )
+)
+
+#Termino tratamiento de datos y empiezo armado de funciones----
+
+# write de data_copy1 ----
+write_csv(data_copy1, "data_FORMIT.csv")
+
+#Armo func para groupear por dos factores y poner N y Porcentaje ----
+group <- function(df, var1, var2){
+  var1 <-  enquo(var1); var2 <-  enquo(var2);
+  df %>% 
+    group_by(!!var1,!!var2, .drop=FALSE) %>% 
+    summarise(N = n()) %>% 
+    mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+}
+
+##Armo func para armar el data.frame y bindear al final  ----
+nuevo_data_frame <- function(df){
+  nuevo_df <- data.frame(replicate(6,colnames(df)[2]), df[1],df[2],df[3],df[4])
+  colnames(nuevo_df) <- c("Politica",colnames(df)[1],"Respuesta",colnames(df)[3],colnames(df)[4])
+  return(nuevo_df)
+}
+
+##Armo func para armar el data.frame y bindear al final (Estudios daba error)  ----
+nuevo_data_frame_Estudios <- function(df){
+  nuevo_df <- data.frame(replicate(9,colnames(df)[2]), df[1],df[2],df[3],df[4])
+  colnames(nuevo_df) <- c("Politica",colnames(df)[1],"Respuesta",colnames(df)[3],colnames(df)[4])
+  return(nuevo_df)
+}
+
+
+##Funcion de stats (al final solo calcule fisher)  ----
+all_stats <- function (df){
+  Fisher = df %>% fisher.test()
+  p_value = Fisher$p.value
+  p_value = case_when(
+    p_value >= 0.05 ~ "$\\geq 0,05$",
+    p_value > 0.01 ~ "\\textbf{<0,05}$^{*}$",
+    p_value > 0.001 ~ "\\textbf{<0,01}$^{**}$",
+    TRUE ~ "\\textbf{<0,001}$^{***}$",
+    .default = "$0_s$"
+  )
+ 
+  return(p_value)
+}
+
+##Mcnemar  ----
+all_mcnemar <- function (df){
+  Mcnemar = df %>% mcnemar.test()
+  p_value = Mcnemar$p.value
+  p_value_latex = case_when(
+    p_value >= 0.05 ~ "$\\geq 0,05$",
+    p_value > 0.01 ~ "\\textbf{<0,05}$^{*}$",
+    p_value > 0.001 ~ "\\textbf{<0,01}$^{**}$",
+    p_value > 0.0001 ~ "\\textbf{<0,001}$^{***}$",
+    .default = "$0_s$"
+  )
+   nuevo_df <- data.frame(p_value,p_value_latex)
+   colnames(nuevo_df) <- c("p.value", "p_value_latex")
+  return(nuevo_df)
+}
+
+## Is Warning (porque chi2 me daba warning y para reportarlo)  ----
+is.warningorerror <- function(x) {
+  op <- options()
+  on.exit(options(op))
+  options(warn = 2)
+  berryFunctions::is.error(x)
+}
+
+
+#Agruopacion de politicas + N + Porcentaje  ----
+group_1f <- function(df, var1){
+  var1 <-  enquo(var1); 
+  df %>% 
+    group_by(!!var1, .drop=FALSE) %>% 
+    summarise(N = n()) %>% 
+    mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+}
+
+#Arma data frame para poder bindear politicas  ----
+nuevo_data_frame_1f <- function(df){
+  nuevo_df <- data.frame(replicate(3,colnames(df)[1]), df[1],df[2],df[3])
+  colnames(nuevo_df) <- c("Politica","Respuesta",colnames(df)[2],colnames(df)[3])
+  return(nuevo_df)
+}
+
+##convierto data para stdres ----
+stdres_tab <- function(x){
+  x = case_when(
+    x<= -(qnorm(1 - 0.0010/2)) ~ "-***",
+    x<= -(qnorm(1 - 0.01/2)) ~ "-**",
+    x<= -(qnorm(1 - 0.05/2)) ~ "-*",
+    x<= qnorm(1 - 0.05/2) ~ "ns",
+    x<= qnorm(1 - 0.01/2) ~ "+*",
+    x<= qnorm(1 - 0.001/2) ~ "+**",
+    x<= qnorm(1 - 0.0001/2) ~ "+***",
+    TRUE ~ "+***"
+    
+  )
+}
+
+```
+```{r preparo-tabla, echo = FALSE}
+
+#Variables Sociodemográficas ----
+
+##Sexo_demo ----
+Sexo <- data_copy1 %>% 
+  group_by(Sexo) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Sexo_demo ----
+Sexo_tabla <- data.frame(c("Sexo", ""), Sexo$Sexo ,Sexo$N, Sexo$Porcentaje)
+colnames(Sexo_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Joven_demo ----
+Joven <- data_copy1 %>% 
+  group_by(factor_joven) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+## Joven_tabla
+Joven_tabla <- data.frame(c("Edad", ""), Joven$factor_joven ,Joven$N, Joven$Porcentaje)
+colnames(Joven_tabla) <- c("Varbiale","Categoría","n","%")
+
+
+##Origen_demo ----
+Origen <- data_copy1 %>% 
+  group_by(Origen) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Origen ----
+Origen_tabla <- data.frame(c("Origen", ""), Origen$Origen ,Origen$N, Origen$Porcentaje)
+colnames(Origen_tabla) <- c("Varbiale","Categoría","n","%")
+
+
+## Estudios ----
+Estudios <- data_copy1 %>% 
+  group_by(Estudios) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Estudios ----
+Estudios_tabla <- data.frame(c("Estudios", "",""), Estudios$Estudios ,Estudios$N, Estudios$Porcentaje)
+colnames(Estudios_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Area ----
+Area <- data_copy1 %>% 
+  group_by(Area_Total) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Area ----
+Area_tabla <- data.frame(c("Area", "","",""), Area$Area_Total ,Area$N, Area$Porcentaje)
+colnames(Area_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Propia_demo ----
+Propia <- data_copy1 %>% 
+  group_by(Propia) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Propia ----
+Propia_tabla <- data.frame(c("Propia",""), c("No","Si") ,Propia$N, Propia$Porcentaje)
+colnames(Propia_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Variedades_demo ----
+Variedades <- data_copy1 %>% 
+  group_by(Variedades) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Variedades ----
+Variedades_tabla <- data.frame(c("Variedades","",""), Variedades$Variedades, Variedades$N, Variedades$Porcentaje)
+colnames(Variedades_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Invernadero_demo ----
+Invernadero <- data_copy1 %>% 
+  group_by(Invernadero) %>% 
+  summarise(N = n()) %>% 
+  mutate(N = N,Porcentaje = round(((N/sum(N))*100), 0))
+
+### tabla_Invernadero_demo ----
+Invernadero_tabla <- data.frame(c("Invernadero",""), c("No","Si") ,Invernadero$N, Invernadero$Porcentaje)
+colnames(Invernadero_tabla) <- c("Varbiale","Categoría","n","%")
+
+##Todas_tabla_demo
+Todas_demo_tabla<- rbind(Sexo_tabla,Joven_tabla,Origen_tabla, Estudios_tabla, Area_tabla, Propia_tabla, Variedades_tabla, Invernadero_tabla)
+
+
+
+```
+```{r tabla-caracterizacion, echo = FALSE}
+
+knitr::kable(Todas_demo_tabla, format= "latex", caption = "Caracterización de agricultores entrevistados según factores sociodemográficos y técnico productivos.", booktabs = T, caption.short = "Caracterización de los entrevistados") %>%
+  row_spec(0, bold = T) %>%
+  row_spec(2, hline_after = T) %>% 
+  row_spec(4, hline_after = T) %>% 
+  row_spec(6, hline_after = T) %>% 
+  row_spec(9, hline_after = T) %>% 
+  row_spec(13, hline_after = T) %>% 
+  row_spec(15, hline_after = T) %>% 
+  row_spec(18, hline_after = T) %>% 
+  pack_rows("Sociodemográficos", 1, 9, hline_after = T,latex_align = "l") %>% 
+  pack_rows("Técnicos productivos",10,20, hline_after = T ,latex_align = "l") %>% 
+  add_footnote("$n=55$",  escape = F) 
+```

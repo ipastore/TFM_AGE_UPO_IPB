@@ -1,0 +1,33 @@
+\centering
+
+\vspace{30mm}
+
+Agradezco a mis tutores Gloria y Pau por guiarme con el escrito del presente trabajo durante mi estadía en Sevilla.
+
+
+\vspace{10mm}
+
+Gracias a la compañera Laura por ayudarme con el análisis estadístico.
+
+
+\vspace{10mm}
+
+Profundo agradecimiento a los agricutlores y agricultoras que con humildad me recibieron con los brazos abiertos y llenaron mi alacena con alimento sano y soberano.
+
+
+\vspace{10mm}
+
+Gracias a todos y a todas las que hacen posible que pueda dedicarme a aportar mi granito de arena.
+
+
+\vspace{10mm}
+
+A la Madre Tierra por nutrirnos y sostenernos.
+
+\vfill
+
+
+\begin{flushright}
+Ignacio Pastore Benaim \\
+11 Octubre 2023
+\end{flushright}

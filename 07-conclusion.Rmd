@@ -1,0 +1,19 @@
+---
+#########################################
+# options for knitting a single chapter #
+#########################################
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/template.tex
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+
+# Conclusión {#conclusion}
+
+Se han estudiado la opinión de 55 agricultores de tomate ecológico alrededor de Andalucía y Extremadura acerca de las PPs de la UE relacionadas al sector agrícola y se concluye que se confirman las 3 hipótesis planteadas. Por un lado, las PPs son percibidas con diferencias entre sí y por el otro, tanto los factores sociodemográficos como técnicos productivos están asociados a la percepción de los agricultores de las PPs.
+
+Estas múltiples asociaciones pueden ayudar a esclarecer las razones por las cuales las PPs aplicadas hasta el día de la fecha resultan insuficientes para alcanzar los *ODS* y las metas del *PVE*. Al mismo tiempo que sirven como diagnóstico, conforman los cimientos para la modificación o desarrollo de futuras PPs que sean funcionales a las necesidades de los Pueblos y la Naturaleza.

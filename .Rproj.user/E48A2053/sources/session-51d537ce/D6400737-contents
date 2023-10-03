@@ -1,0 +1,489 @@
+---
+output:
+  bookdown::pdf_document2:
+    template: templates/template.tex
+  bookdown::html_document2: default
+  bookdown::word_document2: default
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Introducción {#introduccion}
+
+\minitoc
+
+## \textquestiondown Cómo llegamos hasta acá? {#como_llegamos}
+
+La alimentación es uno de los nexos principales entre un individuo y su
+entorno. El ser humano interviene en los ciclos naturales de nutrientes
+y energía para asegurar su supervivencia. Desde los humanos más
+primitivos, hace unos 2.5 millones de años, esta relación estaba
+dominada por un sistema de caza y recolección. Con el advenimiento de la
+agricultura, hace 12.000 años, las intervenciones del ser humano en los
+sistemas ecológicos se intensificaron. De un sistema nómada de caza y
+recolección se pasó a un sistema sedentario motorizado por la energía
+solar, captada por la fotosíntesis, el trabajo animal y la mano de obra
+humana. Así, la agricultura permitió la aparición de las primeras
+civilizaciones sedentarias donde tuvieron lugar los primeros
+intercambios comerciales. Con esto, la alimentación además de ser un
+nexo con el entorno natural se convirtió en una vinculación entre
+individuos.
+
+A finales del siglo XVIII con la llegada de la revolución industrial el
+ser humano potenció su capacidad de transformación del entorno,
+iniciando una época geológica denominada "Antropoceno", cuya principal
+fuente de cambio geológico es la actividad humana [@crutzen2021].
+
+Durante el siglo XX, la industrialización de la agricultura reconfiguró
+radicalmente las fuerzas motoras de los sistemas agrícolas. La energía
+solar fue suplantada por energía de base fósil y el trabajo animal y
+mano de obra humana fue suplantada por maquinaria agrícola
+[@agnoletti2006; @guzmáncasado2009; @gonzálezdemolina2014].
+
+En la década de 1960, el aporte biotecnológico a la agricultura dio
+lugar a la *Revolución Verde*. A partir de la introducción de un paquete
+tecnológico formado por variedades de semillas mejoradas, pesticidas y
+fertilizantes inorgánicos, la producción agropecuaria se
+super-intensificó permitiendo aumentar la producción global de alimentos
+muy por encima del crecimiento de la población mundial
+[@change2019land]. La agricultura resultante de estas prácticas es
+llamada *Agricultura Convencional* y es la que rige el sistema
+agroalimentario actual [@guzman2000].
+
+Hoy la actual crisis civilizadora global, marca la necesidad de
+reformular el desarrollo socioeconómico, donde el sistema
+agroalimentario es la pieza clave por constituir la mayor fuerza motriz
+de las transformaciones biofísicas del Planeta Tierra [@tilman2001;
+@foley2005; @weis2013].
+
+## Crónica de un Colapso anunciado: \textquestiondown De qué hablamos cuando hablamos de crisis? {#colapso}
+
+Cada vez es más evidente que estamos atravesando una crisis estructural
+[@garridopeñafrancisco2007; @toledo2012grandes] que expone los límites
+de nuestra civilización. A continuación se desarrollan algunos de ellos.
+
+### Límites biofísicos {#biofisicos}
+
+La comunidad científica ha identificado límites planetarios que de
+sobrepasarse complican la regeneración de los sistemas ecológicos que
+sustentan las condiciones necesarias para el desarrollo de la vida
+humana [@rockstrom2009planetary].
+
+Cinco de los nueve límites desarrollados por Rockström ya fueron
+sobrepasados: la interferencia en el ciclo del nitrógeno y el fósforo;
+el uso y contaminación del agua; el uso y degradación de los suelos; el
+cambio climático y la pérdida de biodiversidad [@steffen2015]. Con
+excepción del cambio climático, la agricultura es la principal
+influencia de estos cinco límites [@campbell2017].
+
+### Límites físicos al crecimiento económico {#limities_económicos}
+
+En el 2022, según el Banco Mundial, el mercado de commodities sufrió una
+gran suba de precios, llevando a algunas materias primas a sus precios
+máximos históricos [@worldbankgroup2022]. Por un lado, este shock
+inflacionario puede ser atribuido a una nueva guerra, la de Ucrania y
+Rusia, donde Ucrania es exportador neto de granos y fertilizantes
+químicos. En este contexto, el régimen agroalimentario vuelve a mostrar
+su talón de Aquiles, la globalización y su falta de resiliencia debido a
+la integración vertical de sus procesos.
+
+Sin embargo, no se debe perder de vista el agotamiento de los recursos
+naturales como variable determinante en la inflación de los precios de
+las materias primas. Según la teoría de Hubbert [@king1956nuclear], la
+extracción de recursos no-renovables tiene un pico, que luego de haberlo
+pasado, la tasa de beneficio de extracción por unidad de material
+decrece. En otras palabras, a mayor escasez, más costoso es la
+extracción del material y, por ende, más caro su utilización. Por
+ejemplo, cada vez es más costoso extraer una tonelada de petróleo
+[@hall2009minimum; @hall2011introduction; @laherrère2022]. Pero
+lamentablemente este no es el único caso, una situación similar sucede
+con el fósforo [@cordell2010], hierro, aluminio y cobre
+[@valerocapilla2015] y otros recursos renovables como la madera
+[@shearman2012] y el agua [@aguilera2019].
+
+El crecimiento económico durante el siglo XX sostenido por las materias
+primas baratas se topó con la finitud de los recursos
+[@united2011decoupling; @unep2016global] y, en consecuencia, la alta
+dependencia de insumos externos al régimen agroalimentario limita
+rotundamente la sostenibilidad del mismo.
+
+### El hambre como límite: inseguridad alimentaria {#hambre}
+
+Según la FAO, en el 2022, 2.400 millones de personas sufrieron de
+inseguridad alimentaria alta o moderada (29,6% de la población mundial y
+más de 391 millones de personas que en 2019). Además, se estima que
+entre 690 y 783 millones de personas sufrieron de hambre (alrededor del
+9% de la población mundial y más de 3,8 millones que en 2021)
+[@thestat2023].
+
+Pese a que actualmente se producen alimentos suficientes para alimentar
+a toda la población mundial, el régimen agroalimentario no consigue
+cumplir con lo que debería ser su objetivo principal. Parece ser que su
+fin es otro, convertir el alimento en mercancía.
+
+### Abandono de tierras y recambio generacional {#abandono_tierras}
+
+El fenómeno de intensificación y concentración también afecta al diseño
+demográfico del paño campo-ciudad. En 1950 el 30 % de la población vivía
+en ciudades, para el 2021 este número aumentó a 57% y se proyecta que
+para 2050 siete de cada diez personas vivan en la ciudad [@thestat2023].
+
+Estos números dejan entrever dos síntomas que imperan atenderse: el
+abandono de tierras y la falta de recambio generacional en las familias
+productoras. La expansión del monocultivo y la globalización alimentaria
+ha llevado a la ruina a millones de productores, provocando el abandono
+de tierras [@demolina2021]. Además, las presiones económicas hacia los
+pequeños productores limita el horizonte de bienestar de los jóvenes que
+deciden emigrar hacia las ciudades en búsqueda de prosperidad económica.
+
+Es importante remarcar que la población urbana se alimenta de lo que se
+produce en zonas rurales. De profundizarse este pronóstico se pone en
+riesgo el acceso a alimentos, agravando el estado de la seguridad
+alimentaria y perdiendo definitivamente la soberanía alimentaria de los
+pueblos.
+
+## \textquestiondown Quién dijo que todo está perdido? Agroecología como solución {#quiendijoperdido}
+
+Ante semejante panorama desesperanzador la Agroecología se presenta como
+un marco teórico-práctico que busca dar soluciones de manera holística a
+los grandes desafíos a los que nos enfrentamos hoy.
+
+### Un poco de historia {#historia_agroecologia}
+
+La primera vez que se utilizó el término agroecología en el ambiente
+académico fue en el año 1928 por Bensin [@bensin1928agroecological]. En
+un principio y, como lo indica la composición del término, se trataba de
+la fusión de dos áreas de conocimiento hasta el momento separadas: la
+agricultura y la ecología. Hasta finales de los 60s la utilización del
+término se refirió a la parte práctica, un conjunto de técnicas para
+producir de manera sostenible a nivel parcela. La agroecología entendida
+como la ecología aplicada a la producción de plantas y la gestión de
+tierras agrícolas [@henin1967acquisitions].
+
+A partir de los 70s, la noción de la agroecología se expandió
+probablemente como respuesta a la *Revolución Verde*
+[@shiva1989violence; @hecht1995evolution]. Por un lado, se
+intensificaron los estudios de las prácticas derivadas de la aplicación
+de la ecología a los agroecosistemas [@altieri1987agroecology;
+@gliessman1990agroecology] y, en paralelo, emergieron escuelas de
+pensamiento y movimientos que reivindicaban las prácticas agroecológicas
+como principal vector de desarrollo rural .
+
+Hacia 1990, se volvió a ampliar el alcance, pasando de la escala de los
+agroecosistemas a nivel local a los sistemas agroalimentarios
+[@wezel2009], entendidos como redes de producción, procesamiento,
+distribución y consumo de alimentos que se estructuran desde el nivel
+local hasta la escala global.
+
+Para superar los desafíos de crecimiento de escala, la agroecología ha
+ido combinando sinérgicamente estas tres dimensiones de acción: como
+ciencia, práctica y movimiento social. Por tanto, la agroecología debe
+entenderse como una "*ciencia transformadora*" [@levidow2014;
+@schneidewind2016pledge], o "*ciencia digna*" [@carrascoandrése.2014],
+es decir, un enfoque transdisciplinario basado en principios de la
+sostenibilidad socioeconómica [@méndez2013] que busca transformar el
+régimen agroalimentario [@holt2013agroecology; @mcmichael2006feeding].
+
+### A seguir escalando: Agroecología Política {#agroecologia_politica}
+
+Las raíces de la crisis del régimen agroalimentario no son los impactos
+socioambientales sino el marco institucional que lo gobierna. No hay que
+confundir las causas con las consecuencias, es menester un cambio
+profundo en el marco institucional vigente para que las experiencias
+agroecológicas prosperen y se mantengan en el tiempo [@demolina2021].
+
+El punto de inflexión de la inclusión de la agroecología en el diseño de
+políticas públicas probablemente surgió con la publicación del IAASTD
+reconociendo a la agroecología como una "alternativa" prometedora para
+resolver los problemas del hambre, pobreza rural y desarrollo sostenible
+[@iaastd2009]. Luego, otros organismos de las Naciones Unidas publicaron
+documentos reforzando el potencial transformador de la agroecología
+[@deschutter2011agroecology; @HLPE12].
+
+Por ende, la agroecología política tiene como objetivo el diseño de
+instituciones [@ostrom1990governing; @ostrom2001commons; @ostrom2009]
+que favorezcan la sustentabilidad agraria. Se trata, pues, de
+metamorfosear el marco institucional impuesto por el régimen alimentario
+mediante el salto de escala de las experiencias agroecológicas. Las
+políticas públicas constituyen un instrumento imprescindible para
+generar un nuevo marco normativo próspero que sustente y multiplique las
+experiencias agroecológicas locales hasta generar una masa crítica capaz
+de generar un nuevo régimen agroalimentario sustentable.
+
+### Actores principales: campesinado y familias productoras {#agricultura-familiar}
+
+La forma mayoritaria de organizar la producción mundial de alimentos es
+la agricultura familiar. Alrededor del 75% de las tierras agrícolas son
+manejadas por agricultores familiares [@lowder2016]. Eso significa que
+la agricultura familiar es la fuerza sociomaterial y cultural sobre la
+cual debe basarse la propuesta agroecológica.
+
+Resulta obvio pensar en que cualquier estrategia que haga avanzar la
+transición, masificando las experiencias agroecológicas y construyendo
+un régimen alimentario alternativo debe basarse en los campesinos.
+
+## Propuesta de Trabajo {#prouesta_trabajo}
+
+Este Trabajo Final de Máster propone estudiar la opinión de los
+agricultores ecológicos locales de Andalucía y Extremadura acerca de
+algunas políticas públicas (PPs) de la UE relacionadas con el regimen
+agroalimentario. Para acotar el alcance del trabajo, se limitó la
+elección de los entrevistados a agricultores de un cultivo
+característico de la zona, el tomate.\
+Se evaluará el rumbo de la transición agroecológica a través de la
+alineación del marco normativo a un nuevo régimen agroalimentario.
+Finalmente se sacarán conclusiones para el diseño de futuras PPs que
+puedan catalizar la transformación.
+
+### Políticas Públicas de la UE a analizar {#PPs}
+
+En el contexto descripto en la sección \@ref(colapso), la Unión Europea
+ha trazado estrategias trasnacionales para afrontar los desafíos
+ambientales celebrando a fines del 2019 el *"Pacto Verde Europeo" (PVE)*
+[^01-introduccion-1]. Según explica el documento de divulgación del
+*PVE*:
+
+[^01-introduccion-1]: [Comunicación de la Comisión Al Parlamento
+    Europeo, al Consejo Europeo, al Consejo, al Comité Económico y
+    Social Europeo y al Comité de Las Regiones: El Pacto Verde Europeo
+    [(COM(2019)640
+    final]](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=COM%3A2019%3A640%3AFIN)
+
+> *"Se trata de una nueva estrategia de crecimiento destinada a
+> transformar la UE en una sociedad equitativa y próspera, con una
+> economía moderna, eficiente en el uso de los recursos y competitiva,
+> en la que no habrá emisiones netas de gases de efecto invernadero en
+> 2050 y el crecimiento económico estará disociado del uso de los
+> recursos."*
+
+Las estrategias dentro del *PVE* con mayor relación al sector
+agroalimentario y al presente trabajo son las siguientes:
+
+-   Estrategia de la granja a la mesa.
+-   Directiva del uso sostenible de plaguicidas.
+-   Estrategia sobre la biodiversidad.
+
+Además de las 3 normas anteriores se analizarán otras PPs relevantes
+para el sector agroalimentario español:
+
+-   Directiva de Nitratos.
+-   Directiva de Hábitats y Directiva de Aves.
+-   Directiva del Marco del Agua.
+
+A continuación se realiza una breve descripción de cada una de ellas.
+
+#### Estrategia de la Granja a la Mesa {#granja-mesa}
+
+En la primavera de 2020 se lanza la estrategia "De la granja a la mesa"
+[^01-introduccion-2] donde se tratan ampliamente los desafíos para
+alcanzar un sistema alimentario sostenible.\
+
+[^01-introduccion-2]: [Comunicación de la Comisión Al Parlamento
+    Europeo, al Consejo Europeo, al Consejo, al Comité Económico y
+    Social Europeo y al Comité de Las Regiones: Estrategia "de la granja
+    a la mesa" para un sistema alimentario justo, saludable y respetuoso
+    con el medio ambiente [(COM(2020)381
+    final]](https://eur-lex.europa.eu/legal-content/ES/TXT/?qid=1693563760418&uri=CELEX%3A52020DC0381)
+
+En general se reconoce que para alcanzar los desafíos ambientales del
+*PVE* y los *Objetivos de Desarrollo Sustentable (ODS)* de la *ONU* es
+necesario actuar a gran escala, integrando las diferentes partes del
+régimen agroalimentario:
+
+> *"... garantizar que la cadena alimentaria, que abarca la producción,
+> el transporte, la distribución, la comercialización y el consumo de
+> alimentos, tenga un impacto medioambiental neutro o positivo, y
+> preservar y restablecer los recursos terrestres, de agua dulce y
+> marinos de los que depende el sistema alimentario."*
+
+En particular, especifica medidas en torno a la producción: técnicas de
+cultivo, ingreso de los agricultores y uso de plaguicidas.
+
+> *"La Comisión tomará medidas adicionales para reducir el uso y el
+> riesgo globales de los plaguicidas químicos en un 50 %, así como el
+> uso de los plaguicidas más peligrosos en un 50 % de aquí a 2030 ...
+> Revisará la Directiva sobre el uso sostenible de los plaguicidas,
+> mejorará las disposiciones relativas a la gestión integrada de plagas
+> (GIP) y promoverá un mayor uso de métodos alternativos seguros para
+> proteger las cosechas de plagas y enfermedades."*
+
+#### Directiva sobre el uso sostenible de plaguicidas
+
+En el año 2009 se instrumentó la Directiva 2009/128/CE
+[^01-introduccion-3]estableciendo un marco para conseguir un uso
+sostenible de los plaguicidas mediante la reducción de los riesgos y los
+efectos de la utilización de plaguicidas en la salud humana y en el
+medio ambiente.
+
+[^01-introduccion-3]: [Directiva 2009/128/CE del Parlamento Europeo y
+    del Consejo, de 21 de octubre de 2009 , por la que se establece el
+    marco de la actuación comunitaria para conseguir un uso sostenible
+    de los plaguicidas (Texto pertinente a efectos del
+    EEE)](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=celex%3A32009L0128)
+
+Sin embargo la evaluación de su aplicación no fue satisfactoria según
+los informes de la Comisión al Parlamento Europeo y al Consejo de
+2017[^01-introduccion-4] y 2020[^01-introduccion-5]. A través de la
+estrategia "De la Granja a la Mesa" se estableció en el año 2022 la
+última actualización de esta directiva delineando nuevos objetivos:\
+
+[^01-introduccion-4]: Informe de la Comisión al Parlamento Europeo y al
+    Consejo sobre los planes de acción nacionales de los Estados
+    miembros y sobre los avances en la aplicación de la Directiva
+    2009/128/CE, relativa al uso sostenible de los plaguicidas
+    [COM(2017) 587 final].
+
+[^01-introduccion-5]: [Informe de la Comisión al Parlamento Europeo y al
+    Consejo sobre la experiencia adquirida por los Estados miembros con
+    la aplicación de los objetivos nacionales establecidos en sus planes
+    de acción nacionales y sobre los avances conseguidos en la
+    aplicación de la Directiva 2009/128/CE relativa al uso sostenible de
+    los plaguicidas [COM(2020) 204
+    final]](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A52020DC0204&qid=1693565338135)
+
+> *"Objetivos de reducción de la Unión para 2030 de productos
+> fitosanitarios químicos:\
+> \
+> 1 - Cada Estado miembro contribuirá, mediante la adopción y la
+> consecución de sus objetivos nacionales de conformidad con el artículo
+> 5, a lograr, de aquí a 2030, una reducción del 50 % a escala de la
+> Unión tanto del uso como del riesgo de los productos fitosanitarios
+> químicos (objetivo 1 de reducción de la Unión para 2030) y del uso de
+> los productos fitosanitarios más peligrosos (objetivo 2 de reducción
+> de la Unión para 2030), en comparación con la media de los años 2015,
+> 2016 y 2017 (denominados conjuntamente los objetivos de reducción de
+> la Unión para 2030).\
+> \
+> 2 - La Comisión calculará anualmente los avances hacia la consecución
+> de los objetivos de reducción de la Unión para 2030 de conformidad con
+> la metodología establecida en el anexo I."*
+
+\
+Como indica la estrategia "De la Granja a la Mesa" la presente directiva
+constituye una de las herramientas principales para reducir la huella
+medioambiental y climática del régimen agroalimentario.
+
+#### Directiva de Hábitats y de Aves
+
+La Directiva de Aves[^01-introduccion-6], adoptada en 1979 y la
+Directiva de Hábitats[^01-introduccion-7], adoptada en 1992, constituyen
+los pilares de la legislación europea en materia de conservación de la
+naturaleza.
+
+[^01-introduccion-6]: [Directiva del Consejo de 2 de abril de 1979
+    relativa a la conservación de las aves silvestres
+    (79/409/CEE)](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A01979L0409-20081223)
+
+[^01-introduccion-7]: [Directiva 92/43/CEE del Consejo de 21 de mayo de
+    1992 relativa a la conservación de los hábitats naturales y de la
+    fauna y flora
+    silvestres](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A01992L0043-20130701)
+
+Según estas 2 directivas se exige a los Estados miembros que prohíban:
+
+-   cualquier forma de captura o sacrificio deliberados en la naturaleza
+-   la perturbación deliberada, por ejemplo, durante la reproducción, la
+    cría, la hibernación o la migración
+-   el deterioro o la destrucción de sus lugares de reproducción o de
+    las zonas de descanso
+-   la destrucción intencionada de nidos o huevos o la recogida, el
+    corte, el arrancamiento o la destrucción de plantas protegidas en la
+    naturaleza
+-   el uso de todos los medios no selectivos de captura o sacrificio que
+    puedan provocar la desaparición a nivel local o perjudicar
+    gravemente la tranquilidad de las poblaciones de dichas especies, la
+    posesión, el transporte o la venta de especímenes capturados en la
+    naturaleza.
+
+#### Estrategia sobre la Biodiversidad 2030
+
+Uno de los límites biofísicos sobrepasados es la pérdida de la
+biodiversidad (sección \@ref(biofisicos)). Como se detalla
+anteriormente, la UE ya disponía de marcos legales y planes de acción
+para proteger la naturaleza y recuperar hábitats y especies. Sin
+embargo, al igual que con la Directiva del Uso Sostenible de
+Plaguicidas, se concluyó que los esfuerzos han sido insuficientes ya que
+la recuperación de la biodiversidad se ha llevado a cabo a pequeña
+escala.
+
+En consecuencia y en consonancia con los ODS y con los objetivos del
+Acuerdo de París sobre el Cambio Climático, la Estrategia sobre la
+Biodiversidad 2030[^01-introduccion-8] busca establecer un nuevo marco
+que impulsen a redoblar esfuerzos. Algunas de las medidas para reforzar
+el plan de recuperación y protección de la biodiversidad son:
+
+[^01-introduccion-8]: [Comunicación de la Comisión Al Parlamento
+    Europeo, al Consejo Europeo, al Consejo, al Comité Económico y
+    Social Europeo y al Comité de Las Regiones: Estrategia de la UE
+    sobre la biodiversidad de aquí a 2030. Reintegrar la naturaleza en
+    nuestras
+    vidas](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=celex%3A52020DC0380)
+
+> 1.  *"Proponer, en 2021, objetivos vinculantes de la UE en materia de
+>     recuperación de la naturaleza, previa evaluación de impacto.
+>     Conseguir que, de aquí a 2030, se recuperen grandes superficies de
+>     ecosistemas degradados y ricos en carbono, que no se produzca
+>     ningún deterioro en las tendencias y el estado de conservación de
+>     hábitats y especies, y que al menos el 30 % de ellos alcance un
+>     estado de conservación favorable o al menos muestre una tendencia
+>     positiva.*
+>
+> 2.  *Detener la pérdida de polinizadores.*
+>
+> 3.  *Reducir en un 50 % el riesgo y el uso de plaguicidas químicos, y
+>     también en un 50 % el uso de los plaguicidas más peligrosos."*
+>
+> 4.  *Lograr que al menos el 10 % de la superficie agraria esté ocupado
+>     por elementos paisajísticos de gran diversidad."*
+>
+> 5.  *Conseguir que al menos el 25 % de las tierras agrarias se dedique
+>     a la agricultura ecológica y que se extiendan las prácticas
+>     agroecológicas en una medida significativa.*
+>
+> 6.  *Plantar en la UE 3 000 millones de árboles, respetando plenamente
+>     los principios ecológicos.*
+>
+> 7.  *Realizar progresos significativos en la rehabilitación de
+>     terrenos contaminados.*
+>
+> 8.  *Lograr que al menos 25 000 km de ríos vuelvan a ser de caudal
+>     libre."*
+
+#### Directiva de Nitratos
+
+A fines del año 1991 se establece la Directiva contra la contaminación
+de nitratos[^01-introduccion-9]. En su artículo 1 se establecen los
+objetivos principales de la misma:
+
+[^01-introduccion-9]: [Directiva del Consejo de 12 de diciembre de 1991
+    relativa a la protección de las aguas contra la contaminación
+    producida por nitratos procedentes de fuentes agrarias
+    (91/676/CEE)](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A01991L0676-20081211)
+
+> -   *"Reducir la contaminación causada o provocada por los nitratos de
+>     origen agrario*
+>
+> -   *Actuar preventivamente contra nuevas contaminaciones de dicha
+>     clase."*
+
+#### Directiva Marco del Agua
+
+Luego de la aprobación de la Directiva de Nitratos, se adoptó a fines
+del año 2000 la Directiva del Marco del Agua[^01-introduccion-10]. Esta
+norma, tiene por objeto el establecimiento de un marco para la
+protección de las aguas superficiales continentales, las aguas de
+transición, las aguas costeras y las aguas subterráneas. En su artículo
+4 ordena a cada Estado Miembro la creación de planes hidrológicos y
+programas de medidas para cada demarcación hidrográfica, con el fin de
+proteger y regenerar los cuerpos de agua. Su fin es garantizar una buena
+salud cualitativa y cuantitativa, es decir, reducir y eliminar la
+contaminación y garantizar que haya suficiente agua para apoyar a la
+vida silvestre al mismo tiempo que las necesidades humanas.
+
+[^01-introduccion-10]: [Directiva 2000/60/CE del Parlamento Europeo y
+    del Consejo, de 23 de octubre de 2000, por la que se establece un
+    marco comunitario de actuación en el ámbito de la política de
+    aguas](https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX%3A32000L0060)

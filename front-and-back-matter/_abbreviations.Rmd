@@ -1,0 +1,11 @@
+\item[CCI] Centro Común de Investigación.
+\item[UE] Unión Europea.
+\item[MIP] Manejo Integral de Plagas.
+\item[PVE] Pacto Verde Europeo.
+\item[ONU] Organización de las Naciones Unidas.
+\item[PPs] Políticas Públicas.
+\item[FAO] Organización de las Naciones Unidas para la Agricultura y la Alimentación.
+\item[ODS] Objetivos de Desarrollo Sustentable.
+\item[SAU] Superficie Agrícola Utilizada.
+
+

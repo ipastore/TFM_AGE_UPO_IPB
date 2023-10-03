@@ -1,0 +1,146 @@
+---
+output:
+  #bookdown::html_document2: default
+  #bookdown::word_document2: default
+  bookdown::pdf_document2:
+    template: templates/template.tex
+    keep_tex: true
+documentclass: book
+#bibliography: [bibliography/references.bib, bibliography/additional-references.bib]
+---
+
+# Discusión {#discusion}
+
+\minitoc <!-- this will include a mini table of contents-->
+
+## Elecciones de factores y distribución de la muestra {#disc-factores-distribucion}
+
+En la Tabla \@ref(tab:tabla-caracterizacion) se puede ver que el 67% de los encuestados fueron mujeres.
+Esto por un lado, marca la brecha de género que existe en zonas rurales [@oedl2015 ; @shortall2015] pero también un defecto a la hora de contactar nuevos agricultores a través del método "bola de nieve".
+Debido a una falta de tiempo y recursos no fue posible la realización de una preselección de posibles encuestados que garantizara el balance de las categorías estudiadas.
+Sorprendentemente el balance se consiguió para los factores asociados con la edad y el origen, estadística que no coincide con la realidad [@zagata2015 ; @leonard2017].
+Uno de los grandes problemas a la hora de plantear la transición hacia un nuevo régimen agroalimentario de base agroecológica es el recambio generacional.
+
+En cuanto los factores técnicos productivos se puede observar una tendencia decreciente de casos a medida que aumenta el tamaño de la SAU.
+Como se marcaba en la Sección \@ref(agricultura-familiar) la base campesina constituye la mayoría de las explotaciones alrededor del mundo tanto en número como en cantidad de alimento producido.
+Sin embargo, actualmente está en debate el papel que se le debe otorgar a los grandes productores a la hora de participar en la transición [@altieri2020].
+El bloqueo institucional que sufre el escalamiento de la agroecología podría ser inicialmente superado por grandes productores, generando luego un efecto de tracción con los productores más pequeños.
+
+Los factores de *"Sexo", "Edad", "Origen" y "Área"* fueron elegidos por considerarse actores fundamentales en la transformación del marco institucional a corto y mediano plazo [@recanati2019].
+Los restantes, *"Estudios,"Propia", "Variedades"e "Invernadero"* fueron electos con un fin exploratorio.
+
+## Comparación entre Políticas Públicas {#PPvsPP}
+
+En la \@ref(fig:fig-todas-politicas) se puede observar la primera tendencia general, el desconocimiento en general de las PPs.
+Con la excepción de *"Biodiversidad"*, la respuesta más popular fue *"No conozco"*.
+La segunda respuesta con mayor frecuencia fue *"Útil"* y por último *"Inútil"*.
+
+A través de la Tabla \@ref(tab:mcnemar-politicas) podemos observar que de las 15 posibilidades de combinación entre PPs, 5 tuvieron una diferencia significativa entre sus respuestas.
+Esto quiere decir que la tendencia general de desconocimiento es válida.
+En otras palabras, dos tercios de las posibilidades totales siguen un patrón ordenado descendentemente por desconocimiento, utilidad e inutilidad.
+
+Al analizar el tercio restante de la Tabla \@ref(tab:mcnemar-politicas), se nota que los cambios de respuesta entre PPs oscila entre el desconocimiento y la utilidad.
+En concreto, en la tabla \@ref(tab:nitratos-biodiversidad)d de los 40 entrevistados que desconocieron la política de "*Nitratos"*, 18 (alrededor del 50%) les pareció útil la de *"Biodiversidad"*.
+Estos resultados permiten dos posibles lecturas.
+Por un lado, cuando los agricultores estan informados acerca de la PP, tienden a percibirla como útil antes que inútil.
+Por otro lado, las nuevas PPs como *"Biodiversidad"* tienen mayor difusión y su campaña de información es más eficiente frente a las PPs con mayor antigüedad.
+Las tablas \@ref(tab:agua-biodiversidad)b, \@ref(tab:nitratos-biodiversidad)d y \@ref(tab:aves-biodiversidad)e demuestran la efectividad de la campaña de difusión de *"Biodiversidad"* frente a las PPs del siglo pasado:"*Agua"*, "*Aves"* y"*Nitratos"*.
+La Tabla \@ref(tab:nitratos-granja)c resiste un análisis similar, donde Granja es percibida de mayor utilidad que "*Nitratos"*.
+En particular, el caso de la tabla Tabla \@ref(tab:aves-biodiversidad)e demuestra la observación anterior ya que la PP de Biodiversidad puede entenderse como una actualización y ampliación de las PPs de *"Aves"*.
+
+Analizando en conjunto las Tablas \@ref(tab:mcnemar-politicas), \@ref(tab:post-mcnemar) y la Figura \@ref(fig:fig-todas-politicas) se puede observar que hay dos nodos de comparación entre las PPs.
+En un extremo, *"Biodiversidad"*, percibida como la de mayor utilidad y en el otro, *"Nitratos"*, percibida como la más desconocida.
+
+En definitiva, se observa que las campañas de información de las PPs son eficientes pero no suficientes.
+
+## Asociación entre factores sociodemográficos y Políticas Públicas
+
+En la tabla 5.4 se observa que de los 24 casos estudiados, 3 resultaron asociados significativamente.
+Dentro de esos 3, hubieron 2 factores en común: Estudios y Origen.
+
+En el primer caso, el factor Estudios influye significativamente (Tabla \@ref(tab:estudios-posthoc)) y hay una asociación positiva entre *"Secundario: No Conozco"* y *"Universitario: Util"*.
+A pesar de que el análisis no es trasladable a las otras PPs, se puede observar el target de las nuevas campañas de difusión, donde a mayor nivel de estudio, mayor conocimiento y percepción de utilidad.
+
+Ampliando la conclusión preliminar de la Sección \@ref(PPvsPP), la insuficiencia de las campañas de difusión de las PPs puede deberse a la imposibilidad de llegar a un público con menor formación.
+
+El caso del factor *"Origen"* permite una nueva lectura.
+Tanto la Tabla \@ref(tab:origen-aves)a como la \@ref(tab:origen-granja)b asocian a un origen rural a la respuesta "*Inútil*" de las PPs "*Granja*" y "*Aves*" respectivamente.
+Mientras que los de origen neorrural tienen una asociación negativa a la respuesta "*Inútil*" para ambos casos.
+En base a este análisis se observa una pérdida de eficiencia en la comunicación de las PPs en los agricultores de origen rural.
+Esto puede deberse a la resistencia al cambio de los agricultores con mayor experiencia pero también a que las PPs efectivamente no estan siendo eficientes en la resolución de los problemas del día a día, como por ejemplo el despoblamiento de zonas rurales o las grandes presiones económicas que llevan a la ruina a muchos de ellos.
+
+## Asociación entre factores técnicos productivos y Políticas Públicas
+
+Al analizar la Tabla \@ref(tab:tecnico-productivos-politicas) se observa que 5 de los 24 casos estudiados tuvieron asociaciones significativas.
+De los 5, hubieron 2 factores en común: *"Área"* e *"Invernadero"*.
+
+Analizando el factor *"Área"*, la Tabla \@ref(tab:area-posthoc) demuestra una de las grandes fallas en el diseño y la difusión de las PPs.
+Tanto para el caso de "*Granja*" y "*Plaguicidas*", los micro productores se encuentran altamente asociados a la respuesta *"No Conozco"*.
+Paradójicamente una de las herramientas de la Estrategia de la Granja a la Mesa es la promoción de las cadenas cortas de distribución donde los micro productores juegan un papel fundamental.
+Además como se marcó en la Sección \@ref(agricultura-familiar) el campesinado y la agricultura familiar, generalmente asociada a micro y pequeñas producciones, debería ser el target principal en vistas de alcanzar los objetivos del *PVE* y los *ODS*.
+
+Por otra parte, el factor *"Invernadero"* se utilizó como un proxy de nivel de tecnificación.
+La Tabla \@ref(tab:invernadero-posthoc) muestra 3 resultados similares donde a mayor nivel de tecnificación se observa una tendencia hacia la percepción de inutilidad de las PPs *"Agua"*, *"Aves"* y *"Nitratos"*.
+Esto se podría deber a una mayor presión de los organismos de control sobre los agricultores más tecnificados.
+
+## \textquestiondown Y entonces? \textquestiondown Cómo vamos?
+
+Durante el primer cuatrimestre del 2023 las emisiones de gases de efecto invernadero disminuyeron en un 2,9% respecto al mismo cuatrimestre del 2022 [@eurostat2023].
+Esta tendencia se condice con la disminución de emisiones desde finales del 2020, posiblemente por la implementación de las nuevas Políticas Públicas en el 2020 como la Estrategia de la Granja a la Mesa y la Estrategia sobre la Biodiversidad 2030.
+
+Sin embargo hay evidencia científica que estos avances no son suficientes.
+El mundo ya está 1,1 $^{\circ}$C más caliente que en la era preindustrial y los pronósticos del IPCC indican que el límite de 1,5$^{\circ}$C pactado en el PVE se alcanzará a inicios de la década del 2030 y para finales de siglo se alcanzará un aumento de entre 2 y 3 $^{\circ}$C frente a la era preindustrial [@IPCC2023].
+
+Por su parte, la UNEP ha publicado un seguimiento del avance de los ODS evidenciando la alarmante brecha entre el progreso actual y la meta fijada. Solamente los objetivos relacionados con el avance tecnológico, como por ejemplo el aumento del acceso a internet, demuestran avances considerables y en camino a llegar a buen puerto.
+Particularmente los objetivos relacionados al sector agrícola, tales como Hambre Cero; Agua limpia y saneamiento; Acción el por el clima; Vida de ecosistemas terrestres, ponen evidencia un avance nulo o, aún más, un retroceso [@UNEP2023].
+
+Los datos oficiales y la percepción en general de los agricultores coinciden en que las nuevas PPs del sector agrícola tienen un impacto positivo pero no suficiente, ni para los objetivos globales, ni para el día a día de los agricultores.
+
+## \textquestiondown Qué podemos hacer?
+
+La transición agroecológica se encuentra ante un bloqueo institucional que imposibilita su escalamiento.
+Elinor Ostrom ha descripto 8 principios de diseño institucional asociados al manejo de los bienes comunes [@commons2021] que nos ayudarán a diagnosticar el bloqueo y proponer posibles mejoras.
+A continuación se describen 3 de ellos aplicados al tema de estudio:
+
+### Principio N $^{\circ}$ 2: Equivalencia proporcional entre beneficios y costos.
+
+Uno de los principales problemas en el sector agrícola actual es la falta de recambio generacional y el abandono de tierras.
+Este síntoma está íntimamente ligado al desbalance existente entre el esfuerzo productivo de los agricultores y el beneficio que obtienen a partir de ello.
+Muchos jóvenes rurales deciden emigrar hacia centros urbanos en búsqueda de un futuro con mayor prosperidad económica [@kontogeorgos2015].
+Al mismo tiempo, los productores de alimento, el primer eslabón de la cadena agroalimentaria, son los que reciben menores ingresos netos proporcionalmente debido a los altos costos de insumos y bajos precios de venta mayoristas.
+
+Es necesario el reconocimiento y la puesta en valor de los agricultores en su conjunto mediante incentivos económicos que justifiquen el arduo y esencial trabajo en el campo.
+La nueva *Política Agraria Común* modificará los beneficios recibidos por cada actor del sector y serán necesarios mecanismos ágiles de diagnóstico que posibiliten la modificación de los incentivos en base a las necesidades locales (Principio N $^{\circ}$ 6).
+
+### Principio N $^{\circ}$ 3: Acuerdos de elección colectiva.
+
+Al diseñar PPs que deberán ser aplicadas a un gran territorio, como la UE, se dificulta la toma en cuenta de la diversidad de los allegados.
+En menor medida se incorpora la opinión de los actores que habitan el territorio.
+El alto desconocimiento de las PPs agrícolas por parte de los productores se basa en el incumplimiento de este principio.
+
+Para aumentar el alcance efectivo de las PPs será necesario la co-creación de reglas, normas y estrategias entre el sector productivo y los organismos de control y decisión.
+Afortunadamente el movimiento social agroecológico cuenta con la representatividad necesaria para proponer sesiones legislativas vinculantes en cada territorio.
+Esencialmente nuevos mecanismos de gobernanza deberán idearse para el diseño de PPs que se adecuen a las necesidades territoriales.
+
+### Principio N $^{\circ}$ 8: Organismos anidados.
+
+Este principio hace referencia a un sistema de gobernanza "policéntrica".
+Se deberá evitar caer en la dicotomía entre la acción top-down (PPs) y bottom-up (acción social) creando instituciones con diferentes rangos de control: a nivel comunal, municipal, provincial, de comunidades autónomas y nacional.
+Esta acción multinivel, en conjunto con el cumplimiento de los principios anteriores, posibilitarán un mecanismo de retroalimentación que podría otorgar resiliencia al nuevo marco normativo.
+
+## Posibles mejoras y trabajo futuro
+
+Como se indicó en la Sección \@ref(disc-factores-distribucion) para obtener resultados más fehacientes sería necesario primero ampliar el número de casos estudiados y luego realizar una selección de la muestra para que todas las categorías con valor de estudio estén balanceadas.
+
+Por otro lado, gracias al trabajo de campo realizado se generó una base de datos con otras posibilidades de estudio que no pudieron ser exploradas por falta de tiempo. Además de las opiniones acerca de las PPs se consultó acerca de factores valorados con un indicador de tipo Likert que pueden ser agrupados en las siguientes 3 categorías:
+
+-   Consecuencias técnico productivas frente a la adopción del MIP.
+-   Factores de importancia para la adopción de un control biológico de plagas.
+-   Afirmaciones generales acerca de la percepción de la agricultura orgánica frente a la convencional.
+
+Por último, sería necesaria la realización de un análisis estadístico multivariado combinando diferentes factores. Por ejemplo, si se estudiara *"Sexo"* y *"Origen"*: \textquestiondown Hay alguna diferencia de opinión entre las mujeres y los hombres neorrurales? \textquestiondown Y entre las mujeres neorrurales y los hombres rurales? Este tipo de análisis permitirá una mayor resolución para identificar posibles mejoras en base a una caracterización más exhaustiva.
+
+Se deja a disposición el acceso al trabajo en [este repositorio de Github.](https://github.com/ipastore/TFM_UPO_UNIA_IPB.git) donde se puede encontrar la base de datos (*.csv*), el cógido del análisis estadístico (*R*) y la posibilidad de reproducir las figuras y tablas (*RMarkdown*, \LaTeX).
+
+
+
