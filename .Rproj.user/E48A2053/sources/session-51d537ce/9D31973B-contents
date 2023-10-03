@@ -181,7 +181,7 @@ library(rcompanion)
 
 #Cargo Archivo----
 #Cargo el CSV que esta limitado con un ; por sel de MACOS?
-data <- read_csv("/Users/ignaciopastorebenaim/Documents/TFM/R_archives/data/data_factor.csv")
+data <- read_csv("data_factor.csv")
 
 #Paso char a factor
 data[sapply(data, is.character)] <- lapply(data[sapply(data, is.character)], as.factor)

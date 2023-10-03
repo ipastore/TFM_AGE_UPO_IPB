@@ -140,7 +140,7 @@ Por otro lado, gracias al trabajo de campo realizado se generó una base de dato
 
 Por último, sería necesaria la realización de un análisis estadístico multivariado combinando diferentes factores. Por ejemplo, si se estudiara *"Sexo"* y *"Origen"*: \textquestiondown Hay alguna diferencia de opinión entre las mujeres y los hombres neorrurales? \textquestiondown Y entre las mujeres neorrurales y los hombres rurales? Este tipo de análisis permitirá una mayor resolución para identificar posibles mejoras en base a una caracterización más exhaustiva.
 
-Se deja a disposición el acceso al trabajo en [este repositorio de Github.](https://github.com/ipastore/TFM_UPO_UNIA_IPB.git) donde se puede encontrar la base de datos (*.csv*), el cógido del análisis estadístico (*R*) y la posibilidad de reproducir las figuras y tablas (*RMarkdown*, \LaTeX).
+Se deja a disposición el acceso al trabajo en [este repositorio de Github.](https://github.com/ipastore/TFM_AGE_UPO_IPB.git) donde se puede encontrar la base de datos (*.csv*), el cógido del análisis estadístico (*R*) y la posibilidad de reproducir las figuras y tablas (*RMarkdown*, \LaTeX).
 
 
 

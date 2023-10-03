@@ -3,7 +3,7 @@
     "path": "~/Documents/TFM/TFM_oxforddown/06-discusion.Rmd",
     "project_path": "06-discusion.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2987843015",
     "contents": "",
     "dirty": false,
     "created": 1696327652592.0,
@@ -11,14 +11,16 @@
     "relative_order": 2,
     "properties": {
         "source_window_id": "",
-        "Source": "Source"
+        "Source": "Source",
+        "cursorPosition": "142,123",
+        "scrollLine": "125"
     },
     "folds": "",
-    "lastKnownWriteTime": 1696326608,
+    "lastKnownWriteTime": 1696328752,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1696326608,
+    "last_content_update": 1696328752217,
     "read_only": false,
     "read_only_alternatives": []
 }
